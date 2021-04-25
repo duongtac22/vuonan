@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Profile users</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body class="">
+<div class="wrapper">
+    <!--header-mobile-->
+    <header class="d-block d-sm-block d-md-none">
+        <div class="d-flex align-items-center  header-mb">
+            <div class=""><a href="#menu" class="toggle-menu d-flex align-items-center" aria-role="button"><img src="images/icon-menu-mb.png" data-zoom="https://demos.imgix.net/wristwatch.jpg?w=1000&ch=DPR&dpr=2"/></a></div>
+            <div class="flex_1 _logo flex_center">
+                <a href="">
+                    <img src="images/logo.png" style="width: 100px"/>
+                </a>
+            </div>
+            <div class="box-right d-flex flex-row">
+                <div class="box-search flex_center">
+                    <a href="javascript:void(0);" class="icon-search"><img src="images/icon-search.png"/></a>
+                </div>
+                <div class="box-cart flex_center position-relative">
+                    <a href="#" class="icon-cart"><img src="images/icon-cart.png"/></a>
+                    <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav id="menu">
+        <div class="wrap-mb w-100 h-100">
+            <a href="#" class="toggle-menu" aria-role="button"><img src="images/menu_close.png"/></a>
+            <div class="box-user-login">
+                <div class="box-user d-flex align-items-center">
+                    <div class="avatar flex_center"><img src="images/user/icon-user.png"/></div>
+                    <div class="account d-flex flex-column">
+                        <span>Tài khoản</span>
+                        <b>Datnguyenhai</b>
+                    </div>
+                </div>
+                <hr>
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="icon-user nav-link " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><img src="images/user/i-user-1.png"/>Thông tin cá nhân</a>
+                    <a class="icon-dh nav-link " id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><img src="images/user/i-dh-1.png"/>Quản lý đơn hàng</a>
+                    <a class="icon-gh nav-link active" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><img src="images/user/i-gh-1.png"/>Bán hàng cùng Rau hữu cơ Sóc sơn</a>
+                    <a href="#" class="nav-link btn-logout "><img src="images/user/i-dx-1.png"/>Đăng xuất</a>
+                </div>
+
+            </div>
+            <ul class="menu-mobile">
+                <li><span>DANH MỤC</span></li>
+                <li class="active"><a href="#" class="lnk-menu">TRANG CHỦ</a></li>
+                <li class="">
+                    <a href="javascript:void(0);" class="lnk-menu" onclick="menuMobile()">SẢN PHẨM</a>
+                    <div class="sub-menu" id="submenu">
+                        <a class="dropdown-item" href="#">Rau sạch</a>
+                        <a class="dropdown-item" href="#">Củ sạch</a>
+                        <a class="dropdown-item" href="#">Quả ngọt</a>
+                        <a class="dropdown-item" href="#">Sản phẩm khác</a>
+                    </div>
+                </li>
+                <li><a href="#" class="lnk-menu">KHUYẾN MẠI</a></li>
+                <li><a href="#" class="lnk-menu">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--header-mobile-->
+    <header>
+        <div class="container d-md-block d-sm-none d-none">
+            <div class="row menu-header align-items-center">
+                <div class="logo">
+                    <a href="#"><img src="images/logo.png"/></a>
+                </div>
+                <ul class="flex_1 flex_center lst-menu nav nav-pills">
+                    <li class="nav-item active"><a href="#" class="nav-link active">Trang chủ</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Rau sạch</a>
+                            <a class="dropdown-item" href="#">Củ sạch</a>
+                            <a class="dropdown-item" href="#">Quả ngọt</a>
+                            <a class="dropdown-item" href="#">Sản phẩm khác</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link ">Khuyến mại</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link ">Liên hệ</a></li>
+                </ul>
+                <div class="right-menu flex_center">
+                    <div class="box-search flex_center">
+                        <a href="javascript:void(0);" class="icon-search"><img src="images/icon-search.png"/></a>
+                    </div>
+                    <div class="box-cart flex_center position-relative">
+                        <a href="#" class="icon-cart"><img src="images/icon-cart.png"/></a>
+                        <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
+                    </div>
+                    <div class="box-login-res flex_center">
+                        <div class="d-flex align-items-center icon-user"><img src="images/icon-user.png"/></div>
+                        <div class="d-flex flex-column">
+                            <div class="_login">
+                                <a href="#" class="">Đăng ký</a>/ <a href="#">Đăng nhập</a>
+                            </div>
+                            <span class="name-des">Tài khoản</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner-slide d-md-block d-sm-none d-none banner-list">
+            <!--<a href="#"><img src="../images/list/banner-list.jpg" class="w-100"/></a>-->
+                <div class="main-nav d-flex flex-column flex_center">
+                    <h4 class="d-flex">Rau sạch</h4>
+                    <div class="d-flex"><a href="#">Trang chủ</a>/<a href="#">Rau sạch</a></div>
+                </div>
+        </section>
+        <!--banner-mobile-->
+        <section class="banner-slide d-block d-sm-block d-md-none">
+            <a href="#"><img src="images/list/banner-list-mb.jpg" class="w-100"/></a>
+            <div class="main-nav d-flex flex-column flex_center">
+                <h4 class="d-flex">Tài khoản</h4>
+                <div class="d-flex"><a href="#">Trang chủ</a>/<a href="#">Tài khoản</a></div>
+            </div>
+        </section>
+        <div class="w-100 veg-main veg-list">
+            <div class="container">
+                <div class="row main-lst">
+                    <div class="col-md-3 d-md-block d-none">
+                        <div class="box-left">
+                            <div class="box-user d-flex align-items-center">
+                                <div class="avatar flex_center"><img src="images/user/icon-user.png"/></div>
+                                <div class="account d-flex flex-column">
+                                    <span>Tài khoản</span>
+                                    <b>Datnguyenhai</b>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <a class="icon-user nav-link " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Thông tin cá nhân</a>
+                                <a class="icon-dh nav-link " id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Quản lý đơn hàng</a>
+                                <a class="icon-gh nav-link active" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Bán hàng cùng Rau hữu cơ Sóc sơn</a>
+                            </div>
+                            <a href="#" class="btn-logout ">Đăng xuất</a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 right-user">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                <div class="w-100 main-inner">
+                                    <div class="w-100 tab-inner">
+                                        <h5>Thông tin cá nhân</h5>
+                                        <div class="w-100">
+                                            <form class="d-flex flex-wrap">
+                                                <div class="form-group w-50 d-flex align-items-center">
+                                                    <label for="exampleInputEmail3">Họ và tên</label>
+                                                    <input type="text" class="form-control"  id="exampleInputEmail3" placeholder="Nhập họ và tên">
+                                                </div>
+                                                <div class="form-group w-50 d-flex align-items-center">
+                                                    <label for="exampleInputEmail3">Giới tính</label>
+                                                    <div class="d-flex box-sex">
+                                                        <label class="container-check">Nam
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="container-check">Nữ
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group w-50 d-flex align-items-center">
+                                                    <label >Số điện thoại</label>
+                                                    <input type="text" class="form-control"  placeholder="Nhập số điện thoại">
+                                                </div>
+                                                <div class="form-group w-50 d-flex align-items-center">
+                                                    <label for="exampleFormControlSelect1">Tỉnh/Thành phố</label>
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                        <option>Chọn tỉnh/thành phố</option>
+                                                        <option>Hà Nội</option>
+                                                        <option>Hà Nội</option>
+                                                        <option>Hà Nội</option>
+                                                        <option>Hà Nội</option>
+
+                                                    </select>
+                                                </div>
+                                                <div class="form-group w-50 d-flex align-items-center">
+                                                    <label for="exampleInputEmail">Email</label>
+                                                    <input type="text" class="form-control"  id="exampleInputEmail" placeholder="Nhập email">
+                                                </div>
+                                                <div class="form-group w-50 d-flex align-items-center">
+                                                    <label for="exampleFormControlSelect2">Quận/Huyện</label>
+                                                    <select class="form-control" id="exampleFormControlSelect2">
+                                                        <option>Chọn quận/huyện</option>
+                                                        <option>Hà Nội</option>
+                                                        <option>Hà Nội</option>
+                                                        <option>Hà Nội</option>
+                                                        <option>Hà Nội</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group w-100 d-flex">
+                                                    <label >Địa chỉ</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Nhập địa chỉ nhận hàng"></textarea>
+                                                </div>
+                                                <div class="w-100 text-center"><button class="btn-update">Cập nhật thông tin</button></div>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                    <div class="w-100 tab-inner">
+                                        <h5>Thay đổi mật khẩu</h5>
+                                        <div class="w-100">
+                                            <form class="d-flex flex-column form-pass">
+                                                <div class="form-group w-100 d-flex align-items-center">
+                                                    <label>Mật khẩu cũ</label>
+                                                    <input type="password" class="form-control" placeholder="Nhập mật khẩu cũ">
+                                                </div>
+                                                <div class="form-group w-100 d-flex align-items-center">
+                                                    <label>Nhập mật khẩu mới</label>
+                                                    <input type="password" class="form-control" placeholder="Nhập mật khẩu mới">
+                                                </div>
+                                                <div class="form-group w-100 d-flex align-items-center">
+                                                    <label>Nhập lại mật khẩu mới</label>
+                                                    <input type="password" class="form-control" placeholder="Nhập lại mật khẩu mới">
+                                                </div>
+                                                <div class="w-100 text-center"><button class="btn-change-pass">Đổi mật khẩu</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade " id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                <div class="w-100 main-inner">
+                                    <div class="w-100 tab-inner tab-inner-order">
+                                        <div class="d-flex align-items-center top-order">
+                                            <div class="flex_1 _box-o">
+                                                <h5 class="rs">Đơn hàng của tôi</h5>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive list_dh">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Mã đơn hàng</th>
+                                                    <th scope="col">Ngày mua</th>
+                                                    <th scope="col">Sản phẩm</th>
+                                                    <th scope="col">Tổng tiền</th>
+                                                    <th scope="col">Trạng thái</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td><a href="#">ACB123</a></td>
+                                                    <td>
+                                                        <div>25/11/2019</div>
+                                                        <div>3:30am</div>
+                                                    </td>
+                                                    <td><a href="#">Rau cả làn và 5 sản phẩm khác</a></td>
+                                                    <td>1.209.000đ</td>
+                                                    <td><div class="sussess">Đặt hàng thành công</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">ACB123</a></td>
+                                                    <td>
+                                                        <div>25/11/2019</div>
+                                                        <div>3:30am</div>
+                                                    </td>
+                                                    <td><a href="#">Rau cả làn và 5 sản phẩm khác</a></td>
+                                                    <td>1.209.000đ</td>
+                                                    <td><div class="pending">Đang vận chuyển</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">ACB123</a></td>
+                                                    <td>
+                                                        <div>25/11/2019</div>
+                                                        <div>3:30am</div>
+                                                    </td>
+                                                    <td><a href="#">Rau cả làn và 5 sản phẩm khác</a></td>
+                                                    <td>1.209.000đ</td>
+                                                    <td><div>Đang đóng gói</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">ACB123</a></td>
+                                                    <td>
+                                                        <div>25/11/2019</div>
+                                                        <div>3:30am</div>
+                                                    </td>
+                                                    <td><a href="#">Rau cả làn và 5 sản phẩm khác</a></td>
+                                                    <td>1.209.000đ</td>
+                                                    <td><div>Đang đóng gói</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">ACB123</a></td>
+                                                    <td>
+                                                        <div>25/11/2019</div>
+                                                        <div>3:30am</div>
+                                                    </td>
+                                                    <td><a href="#">Rau cả làn và 5 sản phẩm khác</a></td>
+                                                    <td>1.209.000đ</td>
+                                                    <td><div>Đang đóng gói</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">ACB123</a></td>
+                                                    <td>
+                                                        <div>25/11/2019</div>
+                                                        <div>3:30am</div>
+                                                    </td>
+                                                    <td><a href="#">Rau cả làn và 5 sản phẩm khác</a></td>
+                                                    <td>1.209.000đ</td>
+                                                    <td><div>Đang đóng gói</div></td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!--pagination-->
+                                        <nav aria-label="" class=" lst-pagin d-md-block d-none">
+                                            <ul class="pagination d-flex justify-content-end">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">Next</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <div class="d-md-none d-block">
+                                            <a href="#" class="flex_center btn-xemthem-lst">Xem thêm</a>
+                                        </div>
+                                        <!--pagination-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show active" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                <div class="w-100 main-inner">
+                                    <div class="w-100 tab-inner">
+                                        <div class="d-flex align-items-center top-order">
+                                            <div class="flex_1 _box-o">
+                                                <h6 class="rs">Bán hàng cùng Rau hữu cơ Sóc Sơn</h6>
+                                                <div>Với nhiều ưu đãi, hoa hồng rất hấp dẫn dành cho bạn</div>
+                                            </div>
+                                        </div>
+                                        <div class="w-100 box-veg-aff">
+                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active " id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Thông tin</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link " id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Thống kê</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="pills-tabContent">
+                                                <div class="tab-pane fade  tab-1 tab-private  show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                                    <div class="row">
+                                                        <div class="col-md-4 h-100">
+                                                            <div class="item d-flex flex-column">
+                                                                <div><img src="images/user/step-1.png"/></div>
+                                                                <span>Bước 1</span>
+                                                                <p>Chia sẻ liên kết của bạn</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 h-100">
+                                                            <div class="item  d-flex flex-column">
+                                                                <div><img src="images/user/step-2.png"/></div>
+                                                                <span>Bước 2</span>
+                                                                <p>Người nhận truy cập liên kết và mua hàng</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 h-100">
+                                                            <div class="item  d-flex flex-column">
+                                                                <div><img src="images/user/step-3.png"/></div>
+                                                                <span>Bước 3</span>
+                                                                <p>Nhận hoa hồng khi giao dịch thành công</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row ">
+                                                        <div class="box-share d-flex w-100 align-items-center">
+                                                            <span>Liên kết của bạn</span>
+                                                            <div class="flex_1"><a href="#">http://rauhuucosocson.com/linkchiasehoahong</a></div>
+                                                            <a href="#" class="clone-link">Sao chép liên kết</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="w-100">
+                                                        <h5>Cách tính hoa hồng</h5>
+                                                        <hr class="w-100">
+                                                        <div class="bullet">
+                                                            Bạn sẽ nhận được hoa hồng khi một người bất kỳ click vào liên kết của bạn và tiến hành mua hàng thành công trên <a href="#">rauhuucosocson.com</a>
+                                                        </div>
+                                                        <ul class="list-inline">
+                                                            <i>Lưu ý:</i>
+                                                            <li class="list-inline">+. Chỉ khi họ click vào liên kết của bạn và mua hàng thành công thì bạn mới được tính hoa hồng.</li>
+                                                            <li class="list-inline">+. Nếu họ click vào liên kết của người khác hoặc click vào liên kết của bạn nhưng không mua hàng, mua hàng không thành công thì bạn không được tính hoa hồng.</li>
+                                                            <li class="list-inline">
+                                                                +. Mức hoa hồng nhận được sẽ khác nhau theo  từng nhóm sản phẩm.
+                                                                Bạn có thể xem mức * ở bảng bên dưới. Ngoài việc nhận được hoa hồng từ người trực tiếp thì click vào liên kết của bạn, bạn cũng sẽ nhận được hoa hồng từ người mà họ giới thiệu.
+                                                            </li>
+                                                        </ul>
+                                                        <h5>Mức tính hoa hồng</h5>
+                                                        <hr class="w-100">
+                                                        <div class="table-responsive box-bonus">
+                                                            <table class="text-center table">
+                                                                <thead class=" table-bordered">
+                                                                <tr>
+                                                                    <td rowspan="2" class="">Nhóm sản phẩm</td>
+                                                                    <td colspan="2">Hoa hồng</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="row-a">Người bạn giới thiệu (A)</td>
+                                                                    <td class="row-pa">Người được A giới thiệu</td>
+                                                                </tr>
+                                                                </thead>
+                                                               <tbody>
+                                                               <tr>
+                                                                   <td>Rau sạch</td>
+                                                                   <td>25%</td>
+                                                                   <td>5%</td>
+                                                               </tr>
+                                                               <tr>
+                                                                   <td>Rau sạch</td>
+                                                                   <td>25%</td>
+                                                                   <td>5%</td>
+                                                               </tr>
+                                                               <tr>
+                                                                   <td>Rau sạch</td>
+                                                                   <td>25%</td>
+                                                                   <td>5%</td>
+                                                               </tr>
+                                                               </tbody>
+
+                                                            </table>
+                                                        </div>
+                                                        <div class="w-100">
+                                                        <p class="rs">Ví dụ:</p>
+                                                            <p class="rs">Bạn gửi liên kết cho A.</p>
+                                                            <p class="rs">A mở liên kết của bạn và tiến hành mua rau sạch trên rauhuucosocson.com</p>
+                                                            <p class="rs">Giá trị đơn hàng của A là 100.000đ</p>
+                                                            <p class="rs">=> Khi A tiến hành giao dịch thành công đơn hàng 100.000d này, bạn sẽ nhận được hoa hồng là 25% x 100.000 = <span>25.000đ</span></p>
+                                                            <p class="rs">Trong đó: 25% là mức hoa hồng của rau sạch.</p>
+                                                            <p class="rs">100.000đ là tổng giá trị đơn hàng rau sạch mà bên A mua.</p><br>
+                                                            <p class="rs">Sau khi bên A mua thành công, bên A giới thiệu cho bên B qua liên kết của bên A.</p>
+                                                            <p class="rs">Bên B truy cập vào liên kết của A và tiến hành mua hàng là sản phẩm Củ sạch với giá trị đơn hàng là 200.000đ</p>
+                                                            <p class="rs">=> Khi bên B tiến hành giao dịch thành công đơn hàng là 200.000d</p>
+                                                            <p class="rs">bên A cũng sẽ nhận được hoa hồng là 25% x200.000đ = <span>50.000đ</span></p>
+                                                        <p class="rs">Bạn cũng sẽ nhận được hoa hồng là 5% x200.000đ= <span>10.000đ</span></p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="tab-pane fade tab-2 tab-private" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                                    <div class="row">
+                                                        <div class="col-md-6 h-100">
+                                                            <div class="item-bonus-1 item-bonus d-flex flex-column ">
+                                                                <div>Hoa hồng nhận được</div>
+                                                                <hr class="">
+                                                                <div class="num-card">100.000<small>VNĐ</small></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 h-100">
+                                                            <div class="item-bonus-2 item-bonus d-flex flex-column">
+                                                                <div>Hoa hồng chờ xác nhận</div>
+                                                                <hr class="">
+                                                                <div class="num-card">100.000<small>VNĐ</small></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row ">
+                                                        <div class="box-share d-flex w-100 align-items-center">
+                                                            <span>Liên kết của bạn</span>
+                                                            <div class="flex_1"><a href="#">http://rauhuucosocson.com/linkchiasehoahong</a></div>
+                                                            <a href="#" class="clone-link">Sao chép liên kết</a>
+                                                        </div>
+                                                    </div>
+                                                    <!---box-hoa hòng-->
+                                                    <h5>Hoa hồng nhận được</h5>
+                                                    <div class="table-responsive list_dh">
+                                                        <table class="table">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">Ngày mua</th>
+                                                                <th scope="col">Tài khoản</th>
+                                                                <th scope="col">Hoa hồng nhận được</th>
+                                                                <th scope="col">Trạng thái đơn hàng</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>25/11/2019</div>
+                                                                </td>
+                                                                <td>**nguyenhai@enbac.com</td>
+                                                                <td>29.000đ</td>
+                                                                <td><div class="sussess">Giao dịch thành công</div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>25/11/2019</div>
+                                                                </td>
+                                                                <td>**nguyenhai@enbac.com</td>
+                                                                <td>29.000đ</td>
+                                                                <td><div class="sussess">Giao dịch thành công</div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>25/11/2019</div>
+                                                                </td>
+                                                                <td>**nguyenhai@enbac.com</td>
+                                                                <td>29.000đ</td>
+                                                                <td><div class="pending">Giao dịch bị hủy</div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>25/11/2019</div>
+                                                                </td>
+                                                                <td>**nguyenhai@enbac.com</td>
+                                                                <td>29.000đ</td>
+                                                                <td><div class="sussess">Giao dịch thành công</div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>25/11/2019</div>
+                                                                </td>
+                                                                <td>**nguyenhai@enbac.com</td>
+                                                                <td>29.000đ</td>
+                                                                <td><div class="sussess">Giao dịch thành công</div></td>
+                                                            </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!--pagination-->
+                                                    <nav aria-label="" class=" lst-pagin d-md-block d-none">
+                                                        <ul class="pagination d-flex justify-content-end">
+                                                            <li class="page-item disabled">
+                                                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                            <li class="page-item active">
+                                                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                            <li class="page-item">
+                                                                <a class="page-link" href="#">Next</a>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                    <div class="d-md-none d-block">
+                                                        <a href="#" class="flex_center btn-xemthem-lst">Xem thêm</a>
+                                                    </div>
+                                                    <!--pagination-->
+
+                                                    <!---box-hoa hòng-->
+                                                    <!---box-hoa hòng-->
+                                                    <h5>Hoa hồng chờ xác nhận</h5>
+                                                    <div class="table-responsive list_dh">
+                                                        <table class="table">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">Ngày mua</th>
+                                                                <th scope="col">Tài khoản</th>
+                                                                <th scope="col">Hoa hồng nhận được</th>
+                                                                <th scope="col">Trạng thái đơn hàng</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>25/11/2019</div>
+                                                                </td>
+                                                                <td>**nguyenhai@enbac.com</td>
+                                                                <td>29.000đ</td>
+                                                                <td><div class="black-text">Đang xử lý đơn hàng</div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>25/11/2019</div>
+                                                                </td>
+                                                                <td>**nguyenhai@enbac.com</td>
+                                                                <td>29.000đ</td>
+                                                                <td><div class="sussess">Giao dịch thành công</div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>25/11/2019</div>
+                                                                </td>
+                                                                <td>**nguyenhai@enbac.com</td>
+                                                                <td>29.000đ</td>
+                                                                <td><div class="pending">Giao dịch bị hủy</div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>25/11/2019</div>
+                                                                </td>
+                                                                <td>**nguyenhai@enbac.com</td>
+                                                                <td>29.000đ</td>
+                                                                <td><div class="sussess">Giao dịch thành công</div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>25/11/2019</div>
+                                                                </td>
+                                                                <td>**nguyenhai@enbac.com</td>
+                                                                <td>29.000đ</td>
+                                                                <td><div class="sussess">Giao dịch thành công</div></td>
+                                                            </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!--pagination-->
+                                                    <nav aria-label="" class=" lst-pagin d-md-block d-none">
+                                                        <ul class="pagination d-flex justify-content-end">
+                                                            <li class="page-item disabled">
+                                                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                            <li class="page-item active">
+                                                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                            <li class="page-item">
+                                                                <a class="page-link" href="#">Next</a>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                    <div class="d-md-none d-block">
+                                                        <a href="#" class="flex_center btn-xemthem-lst">Xem thêm</a>
+                                                    </div>
+                                                    <!--pagination-->
+
+                                                    <!---box-hoa hòng-->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row inner-footer">
+                <div class="w-100 box-mail position-relative">
+                    <img src="images/bg-mail.png" class="w-100 d-md-block d-none d-sm-none"/>
+                    <img src="images/bg-mail-mb.jpg" class="w-100 d-block d-sm-block d-md-none"/>
+                    <div class="inner-mail position-absolute w-100 h-100 d-flex justify-content-end">
+                        <div class="w-50 d-flex justify-content-end align-items-center">
+                            <input type="text" placeholder="Nhập địa chỉ email..">
+                            <button>Đăng ký</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 main-footer">
+                    <div class="col-md-3 d-flex flex-column">
+                        <div><img src="images/logo-footer.png"/></div>
+                        <ul class="rs lst-location list-group">
+                            <li class="list-inline-item i-location d-flex  align-items-center"><img src="images/icon-location.png"/>85 Vũ Trọng Phụng, Q. Thanh Xuân, tp Hà Nội</li>
+                            <li class="list-inline-item i-phone d-flex  align-items-center"><img src="images/icon-telephone.png"/>0917 616 633</li>
+                            <li class="list-inline-item i-mail d-flex  align-items-center"><img src="images/icon-email.png"/><a href="#">vcccorp@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 d-flex flex-column">
+                        <h6>CHÍNH SÁCH</h6>
+                        <a href="#">Chính sách thanh toán</a>
+                        <a href="#">Chính sách đổi trả sản phẩm</a>
+                    </div>
+                    <div class="col-md-3 d-flex flex-column">
+                        <h6>HỖ TRỢ</h6>
+                        <a href="#">Chát hỗ trợ</a>
+                        <a href="#">Hướng dẫn mua hàng</a>
+                        <a href="#"><img src="images/logo-1.png"/></a>
+                    </div>
+                    <div class="col-md-3 d-flex flex-column">
+                        <div class="row">
+                            <img src="images/img-fb.jpg" class="img-fluid"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 footer-bottom">
+                    <div class="w-75">Copyright &copy; 2018  Công ty TNHH Freshpoint. All Rights Reserved.</div>
+                    <div class="w-25 text-right">
+                        Designed by <img src="images/icon-logo-2.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a id="back-to-top" href="#" class="back-to-top"></a>
+    <div class="full"></div>
+    <div class="popup-product">
+        <a href="javascript:void(0);" class="position-absolute btn-close-p"><img src="images/btn-close-pop.png"/></a>
+        <div class="box-images">
+            <a href="javascript:void(0);" class="view-img flex_center view-thumb-large">
+                <img id="zoom_01"   src="images/pop-suplo-1.png" data-zoom-image="images/img-banner-mb.jpg" />
+            </a>
+            <div class="lst-img" id="navigation">
+                <a class="link-img" href="#" data-src="images/pop-suplo-1.png"><img src="images/pop-suplo-1.png"/></a>
+                <a class="link-img" href="#" data-src="images/img-left-bapcai-2.png"><img src="images/img-left-bapcai-2.png"/></a>
+                <a class="link-img" href="#" data-src="images/pop-suplo-1.png"><img src="images/pop-suplo-1.png"/></a>
+            </div>
+        </div>
+        <div class="box-detail">
+            <h4>Rau hoa cải xanh</h4>
+            <div>Tình trạng: <b>Còn hàng</b></div>
+            <div class="box-price d-flex">
+                <div class="new-price">90.000đ</div><div class="old-price"><strike>130.000d</strike></div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="weight">
+                    <label>Khối lượng (gram/kg)</label>
+                    <select>
+                        <option>300 gram</option>
+                        <option>300 gram</option>
+                        <option>300 gram</option>
+                        <option>300 gram</option>
+                    </select>
+                </div>
+                <div class="number">
+                    <label>Số lượng</label>
+                    <input type="text" placeholder="01">
+                    <a href="javascript:void(0);" class="btn-up"></a>
+                    <a href="javascript:void(0);" class="btn-down"></a>
+                </div>
+            </div>
+            <div class="d-flex box-control">
+                <a href="#">Mua ngay</a>
+                <a href="#">Thêm vào giỏ</a>
+            </div>
+            <div class="des-pp">
+                <i>Mô tả: </i><br>
+                <p>Hoa cải xanh là loại rau rất giàu chất dinh dưỡng, với hàm lượng vitamin cao và có thể phối hợp đa dạng các món ăn từ xào cho tới nấu canh đều rất hấp dẫn.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/slick.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js" type="text/javascript"></script>
+<script src="js/script.js"></script>
+<script src="js/custom-select.js"></script>
+</html>

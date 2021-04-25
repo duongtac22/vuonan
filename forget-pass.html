@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>popup quên mật khẩu</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/popup-log.css">
+</head>
+<body class="home">
+<div class="wrapper">
+    <!--header-mobile-->
+    <header class="d-block d-sm-block d-md-none">
+        <div class="d-flex align-items-center  header-mb">
+            <div class=""><a href="#menu" class="toggle-menu d-flex align-items-center" aria-role="button"><img src="images/icon-menu-mb.png" data-zoom="https://demos.imgix.net/wristwatch.jpg?w=1000&ch=DPR&dpr=2"/></a></div>
+            <div class="flex_1 _logo flex_center">
+                <a href="">
+                    <img src="images/logo.png" style="width: 100px"/>
+                </a>
+            </div>
+            <div class="box-right d-flex flex-row">
+                <div class="box-search flex_center">
+                    <a href="javascript:void(0);" class="icon-search"><img src="images/icon-search.png"/></a>
+                </div>
+                <div class="box-cart flex_center position-relative">
+                    <a href="#" class="icon-cart"><img src="images/icon-cart.png"/></a>
+                    <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav id="menu">
+        <div class="wrap-mb w-100 h-100">
+            <a href="#" class="toggle-menu" aria-role="button"><img src="images/menu_close.png"/></a>
+            <ul class="menu-mobile">
+                <li><a href="#" class="lnk-menu">TRANG CHỦ</a></li>
+                <li class="">
+                    <a href="javascript:void(0);" class="lnk-menu" onclick="menuMobile()">SẢN PHẨM</a>
+                    <div class="sub-menu" id="submenu">
+                        <a class="dropdown-item" href="#">Rau sạch</a>
+                        <a class="dropdown-item" href="#">Củ sạch</a>
+                        <a class="dropdown-item" href="#">Quả ngọt</a>
+                        <a class="dropdown-item" href="#">Sản phẩm khác</a>
+                    </div>
+                </li>
+                <li><a href="#" class="lnk-menu">KHUYẾN MẠI</a></li>
+                <li><a href="#" class="lnk-menu">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--header-mobile-->
+    <header>
+        <div class="container d-md-block d-sm-none d-none">
+            <div class="row menu-header align-items-center">
+                <div class="logo">
+                    <a href="#"><img src="images/logo.png"/></a>
+                </div>
+                <ul class="flex_1 flex_center lst-menu nav nav-pills">
+                    <li class="nav-item active"><a href="#" class="nav-link active">Trang chủ</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Rau sạch</a>
+                            <a class="dropdown-item" href="#">Củ sạch</a>
+                            <a class="dropdown-item" href="#">Quả ngọt</a>
+                            <a class="dropdown-item" href="#">Sản phẩm khác</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link ">Khuyến mại</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link ">Liên hệ</a></li>
+                </ul>
+                <div class="right-menu flex_center">
+                    <div class="box-search flex_center">
+                        <a href="javascript:void(0);" class="icon-search"><img src="images/icon-search.png"/></a>
+                    </div>
+                    <div class="box-cart flex_center position-relative">
+                        <a href="#" class="icon-cart"><img src="images/icon-cart.png"/></a>
+                        <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
+                    </div>
+                    <div class="box-login-res flex_center">
+                        <div class="d-flex align-items-center icon-user"><img src="images/icon-user.png"/></div>
+                        <div class="d-flex flex-column">
+                            <div class="_login">
+                                <a href="javascript:void(0);" class="btn-register">Đăng ký</a>/ <a href="javascript:void(0);" class="btn-login">Đăng nhập</a>
+                            </div>
+                            <span class="name-des">Tài khoản</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner-slide d-md-block d-sm-none d-none">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/img-banner.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/img-banner.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/img-banner.jpg" alt="First slide">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--banner-mobile-->
+        <section class="banner-slide d-block d-sm-block d-md-none">
+            <a href="#"><img src="images/img-banner-mb.jpg" class="w-100"/></a>
+        </section>
+        <div class="w-100 veg-main">
+            <div class="container">
+                <!---box- top- main-->
+                <div class="row veg-box-3">
+                    <div class="col-md-4 item-veg-3">
+                        <div class="m_item-veg-3  position-relative ">
+                            <img src="images/img-veg-1.jpg" class="w-100"/>
+                            <div class="position-absolute w-100 h-100 veg-content-1 d-flex flex-column justify-content-center">
+                                <h4 class="rs">Rau sạch</h4>
+                                <span >Tươi sạch</span>
+                                <a href="#">Xem tất cả</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 item-veg-3">
+                        <div class="m_item-veg-3  position-relative">
+                            <img src="images/img-veg-2.jpg" class="w-100"/>
+                            <div class="position-absolute w-100 h-100 veg-content-1  d-flex flex-column justify-content-center">
+                                <h4 class="rs">Rau sạch</h4>
+                                <span>Tươi sạch</span>
+                                <a href="#">Xem tất cả</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 item-veg-3">
+                        <div class="m_item-veg-3  position-relative">
+                            <img src="images/img-veg-3.jpg" class="w-100"/>
+                            <div class="position-absolute w-100 h-100 veg-content-1  d-flex flex-column justify-content-center">
+                                <h4 class="rs">Rau sạch</h4>
+                                <span>Tươi sạch</span>
+                                <a href="#">Xem tất cả</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---box- top- main-->
+
+                <!---box- veg-4-->
+                <div class="row flex_center top-m-block">
+                    <img src="images/bg-leaf.png"/>
+                    <div class="w-100 flex_center">Hôm nay ăn gì?</div>
+                </div>
+                <div class="row veg-box-4">
+                    <div class="col-md-3 item-veg-4">
+                        <div class="m_item-veg-4">
+                            <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                            <div class="m4_detail col-md-12 col-7">
+                                <h6 class="rs">Xà lách mới về</h6>
+                                <strike>100.000đ</strike>
+                                <div>90.000đ <span>300gram</span></div>
+                                <a href="##" class="btn-mua">Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 item-veg-4">
+                        <div class="m_item-veg-4">
+                            <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                            <div class="m4_detail col-md-12 col-7">
+                                <h6 class="rs">Xà lách mới về</h6>
+                                <strike>100.000đ</strike>
+                                <div>90.000đ <span>300gram</span></div>
+                                <a href="##" class="btn-mua">Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 item-veg-4">
+                        <div class="m_item-veg-4">
+                            <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                            <div class="m4_detail col-md-12 col-7">
+                                <h6 class="rs">Xà lách mới về</h6>
+                                <strike>100.000đ</strike>
+                                <div>90.000đ <span>300gram</span></div>
+                                <a href="##" class="btn-mua">Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 item-veg-4">
+                        <div class="m_item-veg-4">
+                            <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                            <div class="m4_detail col-md-12 col-7">
+                                <h6 class="rs">Xà lách mới về</h6>
+                                <strike>100.000đ</strike>
+                                <div>90.000đ <span>300gram</span></div>
+                                <a href="##" class="btn-mua">Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <a href="#" class="btn-viewall">Xem tất cả</a>
+                </div>
+                <!---box- veg-4-->
+
+                <!---box- veg-about-->
+                <div class="row flex_center top-m-block">
+                    <img src="images/bg-leaf.png"/>
+                    <div class="w-100 flex_center">Tại sao nên chọn chúng tôi</div>
+                    <span class="w-100 flex_center">Dịch vụ hậu mãi, sản phẩm rau sạch 100% </span>
+                </div>
+                <div class="row d-block d-sm-block d-md-none">
+                    <div class="img-banner-mb">
+                        <img src="images/img-about.png" class="w-100"/>
+                    </div>
+                </div>
+                <div class="row box-about">
+                    <div class="col-md-4">
+                        <div class="row item-about h-100">
+                            <div class="w-100 h-50 c_line">
+                                <strong>100% sạch tự nhiên</strong>
+                                <p>Sản phẩm rau củ quả tươi ngon đạt chuẩn chất lượng VietGap. Nói không với hóa chất độc dại.</p>
+                            </div>
+                            <div class="w-100 h-50 c_line">
+                                <strong>An toàn và tốt cho sức khỏe</strong>
+                                <p>Kiểm ngặt đầu vào nghiêm túc, được kiểm soát kỹ lưỡng trước khi đến tay người tiêu dùng.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-none d-sm-none d-md-block">
+                        <div class="">
+                            <img src="images/img-about.png" class="w-100"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row item-about h-100 text-right">
+                            <div class="w-100 h-50 r_line">
+                                <strong>Giá cả hợp lý</strong>
+                                <p>Mực dù chi phí đầu tư cho sản xuất không nhỏ, nhưng giá cả của chúng tôi ở mức rất phải chăng, phù hợp với mức chi tiêu chung của xã hội hiện nay.</p>
+                            </div>
+                            <div class="w-100 h-50 r_line">
+                                <strong>Luôn tươi ngon</strong>
+                                <p>Với công nghệ bảo quản hiện đại, đảm bảo sản phẩm sẽ luôn tươi ngon mỗi khi đến tay người tiêu dùng.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---box- veg-about-->
+
+
+                <!-- Thực phẩm sạch-->
+                <div class="row flex_center top-m-block">
+                    <img src="images/bg-leaf.png"/>
+                    <div class="w-100 flex_center">Thực phẩm sạch</div>
+                </div>
+                <div class="row box-fresh-food">
+                    <div class="scroll">
+                        <ul class="nav nav-tabs flex_center w-100" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="1" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Sản phẩm khuyến mại</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="2" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Rau vườn</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="3" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Sản phẩm đặc biệt</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="4" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Của & Quả tươi</a>
+                            </li>
+                        </ul>
+                </div>
+                <div class="tab-content w-100" id="myTabContent">
+                    <div class="tab-pane fade show active w-100" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row veg-box-4 w-100">
+                            <!--- slide hiển thị trên web-->
+                            <section class="regular slider-tab d-md-block d-none d-sm-none">
+                                <div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                            <!---icon-view-->
+                                            <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
+                                                <a href="javascript:void(0);" class="icon-view"><img src="images/icon-view.png"/></a>
+                                                <a href="javascript:void(0);" class="icon-cart"><img src="images/icon-cart-2.png"/></a>
+                                            </div>
+                                            <!---icon-view-->
+                                        </div>
+                                    </div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                            <!---icon-view-->
+                                            <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
+                                                <a href="javascript:void(0);" class="icon-view"><img src="images/icon-view.png"/></a>
+                                                <a href="javascript:void(0);" class="icon-cart"><img src="images/icon-cart-2.png"/></a>
+                                            </div>
+                                            <!---icon-view-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                            <!---icon-view-->
+                                            <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
+                                                <a href="javascript:void(0);" class="icon-view"><img src="images/icon-view.png"/></a>
+                                                <a href="javascript:void(0);" class="icon-cart"><img src="images/icon-cart-2.png"/></a>
+                                            </div>
+                                            <!---icon-view-->
+                                        </div>
+                                    </div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                            <!---icon-view-->
+                                            <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
+                                                <a href="javascript:void(0);" class="icon-view"><img src="images/icon-view.png"/></a>
+                                                <a href="javascript:void(0);" class="icon-cart"><img src="images/icon-cart-2.png"/></a>
+                                            </div>
+                                            <!---icon-view-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                            <!---icon-view-->
+                                            <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
+                                                <a href="javascript:void(0);" class="icon-view"><img src="images/icon-view.png"/></a>
+                                                <a href="javascript:void(0);" class="icon-cart"><img src="images/icon-cart-2.png"/></a>
+                                            </div>
+                                            <!---icon-view-->
+                                        </div>
+                                    </div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!--- slide hiển thị trên web-->
+
+                            <!---danh sách hiển thị trên mobile-->
+                            <div class="row veg-box-4 d-md-none d-block d-sm-block">
+                                <div class="col-md-3 item-veg-4">
+                                    <div class="m_item-veg-4">
+                                        <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                                        <div class="m4_detail col-md-12 col-7">
+                                            <h6 class="rs">Xà lách mới về</h6>
+                                            <strike>100.000đ</strike>
+                                            <div>90.000đ <span>300gram</span></div>
+                                            <a href="##" class="btn-mua">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 item-veg-4">
+                                    <div class="m_item-veg-4">
+                                        <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                                        <div class="m4_detail col-md-12 col-7">
+                                            <h6 class="rs">Xà lách mới về</h6>
+                                            <strike>100.000đ</strike>
+                                            <div>90.000đ <span>300gram</span></div>
+                                            <a href="##" class="btn-mua">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 item-veg-4">
+                                    <div class="m_item-veg-4">
+                                        <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                                        <div class="m4_detail col-md-12 col-7">
+                                            <h6 class="rs">Xà lách mới về</h6>
+                                            <strike>100.000đ</strike>
+                                            <div>90.000đ <span>300gram</span></div>
+                                            <a href="##" class="btn-mua">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 item-veg-4">
+                                    <div class="m_item-veg-4">
+                                        <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                                        <div class="m4_detail col-md-12 col-7">
+                                            <h6 class="rs">Xà lách mới về</h6>
+                                            <strike>100.000đ</strike>
+                                            <div>90.000đ <span>300gram</span></div>
+                                            <a href="##" class="btn-mua">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!---danh sách hiển thị trên mobile-->
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="row veg-box-4 w-100">
+                            <!--web-->
+                            <section class="regular-2 slider-tab d-md-block d-none d-sm-none">
+                                <div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-6.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-7.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-5.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-6.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-7.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-veg-4">
+                                        <div class="m_item-veg-4">
+                                            <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
+                                            <div class="m4_detail">
+                                                <h6 class="rs">Xà lách mới về</h6>
+                                                <strike>100.000đ</strike>
+                                                <div>90.000đ <span>300gram</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!--web-->
+                            <!---danh sách hiển thị trên mobile-->
+                            <div class="row veg-box-4 d-md-none d-block d-sm-block">
+                                <div class="col-md-3 item-veg-4">
+                                    <div class="m_item-veg-4">
+                                        <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                                        <div class="m4_detail col-md-12 col-7">
+                                            <h6 class="rs">Xà lách mới về</h6>
+                                            <strike>100.000đ</strike>
+                                            <div>90.000đ <span>300gram</span></div>
+                                            <a href="##" class="btn-mua">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 item-veg-4">
+                                    <div class="m_item-veg-4">
+                                        <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                                        <div class="m4_detail col-md-12 col-7">
+                                            <h6 class="rs">Xà lách mới về</h6>
+                                            <strike>100.000đ</strike>
+                                            <div>90.000đ <span>300gram</span></div>
+                                            <a href="##" class="btn-mua">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 item-veg-4">
+                                    <div class="m_item-veg-4">
+                                        <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                                        <div class="m4_detail col-md-12 col-7">
+                                            <h6 class="rs">Xà lách mới về</h6>
+                                            <strike>100.000đ</strike>
+                                            <div>90.000đ <span>300gram</span></div>
+                                            <a href="##" class="btn-mua">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 item-veg-4">
+                                    <div class="m_item-veg-4">
+                                        <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                                        <div class="m4_detail col-md-12 col-7">
+                                            <h6 class="rs">Xà lách mới về</h6>
+                                            <strike>100.000đ</strike>
+                                            <div>90.000đ <span>300gram</span></div>
+                                            <a href="##" class="btn-mua">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!---danh sách hiển thị trên mobile-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Thực phẩm sạch-->
+                <!---banner- main--->
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="#" class="item-banner-m"><img src="images/img-banner-2.jpg" class="w-100"/></a>
+                    </div>
+                    <div class="col-md-6 d-none d-sm-none d-md-block">
+                        <a href="#" class="item-banner-l"><img src="images/img-banner-3.jpg" class="w-100"/></a>
+                    </div>
+                </div>
+                <!---banner- main--->
+
+                <!--sản phẩm khác-->
+                <div class="row flex_center top-m-block">
+                    <img src="images/bg-leaf.png"/>
+                    <div class="w-100 flex_center">Sản phẩm khác</div>
+                    <span class="w-100 flex_center">Tổng hợp các loại rau củ quả sạch </span>
+                </div>
+                <div class="row veg-box-4">
+                    <div class="col-md-3 item-veg-4">
+                        <div class="m_item-veg-4">
+                            <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                            <div class="m4_detail col-md-12 col-7">
+                                <h6 class="rs">Xà lách mới về</h6>
+                                <strike>100.000đ</strike>
+                                <div>90.000đ <span>300gram</span></div>
+                                <a href="##" class="btn-mua">Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 item-veg-4">
+                        <div class="m_item-veg-4">
+                            <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                            <div class="m4_detail col-md-12 col-7">
+                                <h6 class="rs">Xà lách mới về</h6>
+                                <strike>100.000đ</strike>
+                                <div>90.000đ <span>300gram</span></div>
+                                <a href="##" class="btn-mua">Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 item-veg-4">
+                        <div class="m_item-veg-4">
+                            <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                            <div class="m4_detail col-md-12 col-7">
+                                <h6 class="rs">Xà lách mới về</h6>
+                                <strike>100.000đ</strike>
+                                <div>90.000đ <span>300gram</span></div>
+                                <a href="##" class="btn-mua">Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 item-veg-4">
+                        <div class="m_item-veg-4">
+                            <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                            <div class="m4_detail col-md-12 col-7">
+                                <h6 class="rs">Xà lách mới về</h6>
+                                <strike>100.000đ</strike>
+                                <div>90.000đ <span>300gram</span></div>
+                                <a href="##" class="btn-mua">Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <a href="#" class="btn-viewall">Xem tất cả</a>
+                </div>
+                <!--sản phẩm khác-->
+            </div>
+        </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="row inner-footer">
+            <div class="w-100 box-mail position-relative">
+                <img src="images/bg-mail.png" class="w-100 d-md-block d-none d-sm-none"/>
+                <img src="images/bg-mail-mb.jpg" class="w-100 d-block d-sm-block d-md-none"/>
+                <div class="inner-mail position-absolute w-100 h-100 d-flex justify-content-end">
+                    <div class="w-50 d-flex justify-content-end align-items-center">
+                        <input type="text" placeholder="Nhập địa chỉ email..">
+                        <button>Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 main-footer">
+                <div class="col-md-3 d-flex flex-column">
+                    <div><img src="images/logo-footer.png"/></div>
+                    <ul class="rs lst-location list-group">
+                        <li class="list-inline-item i-location d-flex  align-items-center"><img src="images/icon-location.png"/>85 Vũ Trọng Phụng, Q. Thanh Xuân, tp Hà Nội</li>
+                        <li class="list-inline-item i-phone d-flex  align-items-center"><img src="images/icon-telephone.png"/>0917 616 633</li>
+                        <li class="list-inline-item i-mail d-flex  align-items-center"><img src="images/icon-email.png"/><a href="#">vcccorp@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 d-flex flex-column">
+                    <h6>CHÍNH SÁCH</h6>
+                    <a href="#">Chính sách thanh toán</a>
+                    <a href="#">Chính sách đổi trả sản phẩm</a>
+                </div>
+                <div class="col-md-3 d-flex flex-column">
+                    <h6>HỖ TRỢ</h6>
+                    <a href="#">Chát hỗ trợ</a>
+                    <a href="#">Hướng dẫn mua hàng</a>
+                    <a href="#"><img src="images/logo-1.png"/></a>
+                </div>
+                <div class="col-md-3 d-flex flex-column">
+                    <div class="row">
+                        <img src="images/img-fb.jpg" class="img-fluid"/>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 footer-bottom">
+                <div class="w-75">Copyright &copy; 2018  Công ty TNHH Freshpoint. All Rights Reserved.</div>
+                <div class="w-25 text-right">
+                    Designed by <img src="images/icon-logo-2.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" href="#" class="back-to-top"></a>
+<div class="full" style="display: block"></div>
+<!--quên mật khẩu-->
+    <div class="popup-pass" id="popup-pass" style="display: block">
+        <a href="#" class="btn-back position-absolute"><img src="images/btn-back.png"/></a>
+        <a href="javascript:void(0);" class="position-absolute btn-closed"><img src="images/btn-close-pop.png"/></a>
+        <div class="w-100 main-popup">
+            <h4 class="text-center">Quên mật khẩu</h4>
+            <div class="text-center">
+                Để lấy lại mật khẩu bạn vui lòng nhập địa chỉ email đã đăng ký của mình vào đây
+            </div>
+            <form class="flex_center">
+                <div class="form-group w-100">
+                    <label for="exampleInputEmail1">Nhập địa chỉ email</label>
+                    <input type="email" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nhập email của bạn">
+                </div>
+                <div class="info-error text-center w-100">
+                    <span class="text-error">Địa chỉ email không đúng định dạng</span>
+                    <span class="text-warning">Email này chưa được đăng ký</span>
+                </div>
+                <a href="#" class="btn-reset-pass">CẤP LẠI MẬT KHẨU</a>
+
+            </form>
+
+        </div>
+    </div>
+<!--quên mật khẩu-->
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/slick.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js" type="text/javascript"></script>
+<script src="js/script.js"></script>
+</html>

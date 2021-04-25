@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Liên hệ</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/lienhe.css">
+</head>
+<body class="">
+<div class="wrapper">
+    <!--header-mobile-->
+    <header class="d-block d-sm-block d-md-none">
+        <div class="d-flex align-items-center  header-mb">
+            <div class=""><a href="#menu" class="toggle-menu d-flex align-items-center" aria-role="button"><img src="images/icon-menu-mb.png" data-zoom="https://demos.imgix.net/wristwatch.jpg?w=1000&ch=DPR&dpr=2"/></a></div>
+            <div class="flex_1 _logo flex_center">
+                <a href="">
+                    <img src="images/logo.png" style="width: 100px"/>
+                </a>
+            </div>
+            <div class="box-right d-flex flex-row">
+                <div class="box-search flex_center">
+                    <a href="javascript:void(0);" class="icon-search"><img src="images/icon-search.png"/></a>
+                </div>
+                <div class="box-cart flex_center position-relative">
+                    <a href="#" class="icon-cart"><img src="images/icon-cart.png"/></a>
+                    <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav id="menu">
+        <div class="wrap-mb w-100 h-100">
+            <a href="#" class="toggle-menu" aria-role="button"><img src="images/menu_close.png"/></a>
+            <!--khi chưa đăng nhập-->
+            <div class="box-user-login">
+                <a href="#" class="button-login">ĐĂNG NHẬP</a>
+                <a href="#" class="button-login">ĐĂNG KÍ</a>
+            </div>
+            <!--khi chưa đăng nhập-->
+            <ul class="menu-mobile">
+                <li><span>DANH MỤC</span></li>
+                <li class="active"><a href="#" class="lnk-menu">TRANG CHỦ</a></li>
+                <li class="">
+                    <a href="javascript:void(0);" class="lnk-menu" onclick="menuMobile()">SẢN PHẨM</a>
+                    <div class="sub-menu" id="submenu">
+                        <a class="dropdown-item" href="#">Rau sạch</a>
+                        <a class="dropdown-item" href="#">Củ sạch</a>
+                        <a class="dropdown-item" href="#">Quả ngọt</a>
+                        <a class="dropdown-item" href="#">Sản phẩm khác</a>
+                    </div>
+                </li>
+                <li><a href="#" class="lnk-menu">KHUYẾN MẠI</a></li>
+                <li><a href="#" class="lnk-menu">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--header-mobile-->
+    <header>
+        <div class="container d-md-block d-sm-none d-none">
+            <div class="row menu-header align-items-center">
+                <div class="logo">
+                    <a href="#"><img src="images/logo.png"/></a>
+                </div>
+                <ul class="flex_1 flex_center lst-menu nav nav-pills">
+                    <li class="nav-item active"><a href="#" class="nav-link active">Trang chủ</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Rau sạch</a>
+                            <a class="dropdown-item" href="#">Củ sạch</a>
+                            <a class="dropdown-item" href="#">Quả ngọt</a>
+                            <a class="dropdown-item" href="#">Sản phẩm khác</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link ">Khuyến mại</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link ">Liên hệ</a></li>
+                </ul>
+                <div class="right-menu flex_center">
+                    <div class="box-search flex_center">
+                        <a href="javascript:void(0);" class="icon-search"><img src="images/icon-search.png"/></a>
+                    </div>
+                    <div class="box-cart flex_center position-relative">
+                        <a href="#" class="icon-cart"><img src="images/icon-cart.png"/></a>
+                        <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
+                    </div>
+                    <div class="box-login-res flex_center">
+                        <div class="d-flex align-items-center icon-user"><img src="images/icon-user.png"/></div>
+                        <div class="d-flex flex-column">
+                            <div class="_login">
+                                <a href="#" class="">Đăng ký</a>/ <a href="#">Đăng nhập</a>
+                            </div>
+                            <span class="name-des">Tài khoản</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner-slide d-md-block d-sm-none d-none banner-list">
+            <!--<a href="#"><img src="../images/list/banner-list.jpg" class="w-100"/></a>-->
+                <div class="main-nav d-flex flex-column flex_center">
+                    <h4 class="d-flex">Liên hệ</h4>
+                    <div class="d-flex"><a href="#">Trang chủ</a>/<a href="#">Liên hệ</a></div>
+                </div>
+        </section>
+        <!--banner-mobile-->
+        <section class="banner-slide d-block d-sm-block d-md-none">
+            <a href="#"><img src="images/list/banner-list-mb.jpg" class="w-100"/></a>
+            <div class="main-nav d-flex flex-column flex_center">
+                <h4 class="d-flex">Liên hệ</h4>
+                <div class="d-flex"><a href="#">Trang chủ</a>/<a href="#">Liên hệ</a></div>
+            </div>
+        </section>
+        <div class="w-100 veg-main veg-list">
+            <div class="container">
+                <div class="row main-lst">
+                    <div class="col-md-3">
+                        <div class="box-left row">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link active" id="v-tab-1" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Về chúng tôi</a>
+                                <a class="nav-link " id="v-tab-2" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Thông tin liên hệ</a>
+                                <a class="nav-link " id="v-tab-3" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Hướng dẫn mua hàng</a>
+                                <a class="nav-link " id="v-tab-4" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Chính sách thanh toán</a>
+                                <a class="nav-link " id="v-tab-5" data-toggle="pill" href="#v-pills-5" role="tab" aria-controls="v-pills-5" aria-selected="false">Chính sách giao hàng</a>
+                                <a class="nav-link " id="v-tab-6" data-toggle="pill" href="#v-pills-6" role="tab" aria-controls="v-pills-6" aria-selected="false">Chính sách bảo mật</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 right-user">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade active show" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1">
+                                <div class="w-100 main-inner">
+                                    <h4>Về chúng tôi</h4>
+                                    <div class="w-100 content-about">
+                                        <p>Nội dung liên hệ</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2">
+                                <div class="w-100 main-inner">
+                                    <h4>Thông tin liên hệ</h4>
+                                    <div class="w-100 content-about">
+                                        <p>Nội dung liên hệ</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3">
+                                <div class="w-100 main-inner">
+                                    <h4>Hướng dẫn mua hàng</h4>
+                                    <div class="w-100 content-about">
+                                        <p>Nội dung liên hệ</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4">
+                                <div class="w-100 main-inner">
+                                    <h4>Chính sách thanh toán</h4>
+                                    <div class="w-100 content-about">
+                                        <p>Nội dung liên hệ</p>
+                                        <table>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-5">
+                                <div class="w-100 main-inner">
+                                    <h4>Chính sách giao hàng</h4>
+                                    <div class="w-100 content-about">
+                                        <p>Nội dung liên hệ</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-6">
+                                <div class="w-100 main-inner">
+                                    <h4>Chính sách bảo mật</h4>
+                                    <div class="w-100 content-about">
+                                        <p>Nội dung liên hệ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row inner-footer">
+                <div class="w-100 box-mail position-relative">
+                    <img src="images/bg-mail.png" class="w-100 d-md-block d-none d-sm-none"/>
+                    <img src="images/bg-mail-mb.jpg" class="w-100 d-block d-sm-block d-md-none"/>
+                    <div class="inner-mail position-absolute w-100 h-100 d-flex justify-content-end">
+                        <div class="w-50 d-flex justify-content-end align-items-center">
+                            <input type="text" placeholder="Nhập địa chỉ email..">
+                            <button>Đăng ký</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 main-footer">
+                    <div class="col-md-3 d-flex flex-column">
+                        <div><img src="images/logo-footer.png"/></div>
+                        <ul class="rs lst-location list-group">
+                            <li class="list-inline-item i-location d-flex  align-items-center"><img src="images/icon-location.png"/>85 Vũ Trọng Phụng, Q. Thanh Xuân, tp Hà Nội</li>
+                            <li class="list-inline-item i-phone d-flex  align-items-center"><img src="images/icon-telephone.png"/>0917 616 633</li>
+                            <li class="list-inline-item i-mail d-flex  align-items-center"><img src="images/icon-email.png"/><a href="#">vcccorp@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 d-flex flex-column">
+                        <h6>CHÍNH SÁCH</h6>
+                        <a href="#">Chính sách thanh toán</a>
+                        <a href="#">Chính sách đổi trả sản phẩm</a>
+                    </div>
+                    <div class="col-md-3 d-flex flex-column">
+                        <h6>HỖ TRỢ</h6>
+                        <a href="#">Chát hỗ trợ</a>
+                        <a href="#">Hướng dẫn mua hàng</a>
+                        <a href="#"><img src="images/logo-1.png"/></a>
+                    </div>
+                    <div class="col-md-3 d-flex flex-column">
+                        <div class="row">
+                            <img src="images/img-fb.jpg" class="img-fluid"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 footer-bottom">
+                    <div class="w-75">Copyright &copy; 2018  Công ty TNHH Freshpoint. All Rights Reserved.</div>
+                    <div class="w-25 text-right">
+                        Designed by <img src="images/icon-logo-2.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a id="back-to-top" href="#" class="back-to-top"></a>
+    <div class="full"></div>
+    <div class="popup-product">
+        <a href="javascript:void(0);" class="position-absolute btn-close-p"><img src="images/btn-close-pop.png"/></a>
+        <div class="box-images">
+            <a href="javascript:void(0);" class="view-img flex_center view-thumb-large">
+                <img id="zoom_01"   src="images/pop-suplo-1.png" data-zoom-image="images/img-banner-mb.jpg" />
+            </a>
+            <div class="lst-img" id="navigation">
+                <a class="link-img" href="#" data-src="images/pop-suplo-1.png"><img src="images/pop-suplo-1.png"/></a>
+                <a class="link-img" href="#" data-src="images/img-left-bapcai-2.png"><img src="images/img-left-bapcai-2.png"/></a>
+                <a class="link-img" href="#" data-src="images/pop-suplo-1.png"><img src="images/pop-suplo-1.png"/></a>
+            </div>
+        </div>
+        <div class="box-detail">
+            <h4>Rau hoa cải xanh</h4>
+            <div>Tình trạng: <b>Còn hàng</b></div>
+            <div class="box-price d-flex">
+                <div class="new-price">90.000đ</div><div class="old-price"><strike>130.000d</strike></div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="weight">
+                    <label>Khối lượng (gram/kg)</label>
+                    <select>
+                        <option>300 gram</option>
+                        <option>300 gram</option>
+                        <option>300 gram</option>
+                        <option>300 gram</option>
+                    </select>
+                </div>
+                <div class="number">
+                    <label>Số lượng</label>
+                    <input type="text" placeholder="01">
+                    <a href="javascript:void(0);" class="btn-up"></a>
+                    <a href="javascript:void(0);" class="btn-down"></a>
+                </div>
+            </div>
+            <div class="d-flex box-control">
+                <a href="#">Mua ngay</a>
+                <a href="#">Thêm vào giỏ</a>
+            </div>
+            <div class="des-pp">
+                <i>Mô tả: </i><br>
+                <p>Hoa cải xanh là loại rau rất giàu chất dinh dưỡng, với hàm lượng vitamin cao và có thể phối hợp đa dạng các món ăn từ xào cho tới nấu canh đều rất hấp dẫn.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/slick.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js" type="text/javascript"></script>
+<script src="js/script.js"></script>
+<script src="js/custom-select.js"></script>
+</html>
