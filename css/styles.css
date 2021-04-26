@@ -1,16 +1,27 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
 
+
 @media (min-width: 1200px) {
     .container {
         max-width: 1170px
     }
 }
-
+@media (min-width : 1650px) {
+    .container {
+        max-width: 1420px; 
+    }
+}
+.text-22 {
+    font-size: 22px; 
+}
 .rs {
     padding: 0;
     margin: 0
 }
-
+img {
+    max-width: 100%;
+    height: auto;
+}
 .flex_1 {
     flex: 1
 }
@@ -79,12 +90,16 @@ body .wrapper {
 }
 
 body .menu-header {
-    height: 90px
+    height: 90px;
+    margin-bottom: 10px;
 }
-
+body .menu-header .nav-item {
+    margin-right: 15px; 
+}
 body .menu-header .lst-menu li .nav-link {
     text-transform: uppercase;
-    font-weight: 700
+    font-weight: 700;
+    font-size: 20px;
 }
 
 body .menu-header .lst-menu li.active > a, body .menu-header .lst-menu li.show > a, body .menu-header .lst-menu li:hover > a {
@@ -110,32 +125,42 @@ body .menu-header .lst-menu .dropdown-item.active, body .menu-header .lst-menu .
     background-color: transparent !important
 }
 
-body .menu-header .right-menu .box-search {
+/* body .menu-header .right-menu .box-search {
     width: 40px;
     height: 40px;
     border: 1px solid #72bf44;
     border-radius: 50%;
     margin: 0 0px 0 20px;
 
+} */
+body .header-top {
+    font-size: 20px;
+    padding: 23px 15px 19px; 
+    border-bottom: 1px solid #dcdcdc ; 
 }
-
-body .menu-header .right-menu .box-cart {
-    width: 40px;
-    height: 40px;
-    border: 1px solid #72bf44;
-    border-radius: 50%;
-    margin: 0 15px 0 20px
+body .header-top i , 
+body .header-top a {
+    color : #333333 ;
+}
+body .header-top i {
+    font-size: 28px;
+    margin-right: 14px; 
+}
+body .menu-header .right-menu .box-cart i,
+body .menu-header .right-menu .box-search i {
+   font-size: 34px;
+   color : #333333 ; 
 }
 
 body .menu-header .right-menu .box-cart .num_cart {
     color: #fff;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     background-color: #f47423;
     border-radius: 50%;
-    top: -7px;
-    right: -7px;
-    font-size: 12px
+    top: -8px;
+    right: -17px;
+    font-size: 13px;
 }
 
 body .menu-header .right-menu .box-login-res .icon-user {
@@ -161,9 +186,6 @@ body .veg-main .veg-box-3 {
     margin-bottom: 50px
 }
 
-body .veg-main .veg-box-3 .item-veg-3 {
-    padding: 15px
-}
 body .veg-main .col-padding-0 .item-veg-3{
     padding-left: 0 ;
     padding-right: 0 ;
@@ -177,19 +199,32 @@ body .veg-main .veg-box-3 .m_item-veg-3 {
 }
 
 body .veg-main .veg-box-3 .m_item-veg-3 > img {
-    height: 210px;
+    height: 100%;
     object-fit: cover;
 }
 
 body .veg-main .veg-box-3 .veg-content-1 {
+    position: absolute;
     top: auto;
     left: 0;
-    bottom: 0;
-    padding: 25px;
-    transition: 0.3s ease-in-out;
-    z-index : 3; 
+    bottom: 25px;
+    transition: opacity calc(700ms * 2) ;
+    z-index: 3;
 }
-body .veg-main .veg-box-3 .veg-content-1:before {
+body .veg-main .veg-box-3 .veg-content-1 {
+    padding: 20px ; 
+    opacity: 1;
+    visibility: visible;
+    
+}
+.veg-content-1-effect {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    position: relative;
+}
+body .veg-main .veg-box-3 .veg-content-1-effect:before {
     position: absolute;
     z-index: 2;
     content: "";
@@ -205,7 +240,7 @@ body .veg-main .veg-box-3 .veg-content-1:before {
     transition: all 0.5s ease-in-out;
     filter: alpha(opacity=0);
 }
-body .veg-main .veg-box-3 .veg-content-1:after {
+body .veg-main .veg-box-3 .veg-content-1-effect:after {
     content: "";
     position: absolute;
     z-index: 2;
@@ -221,19 +256,21 @@ body .veg-main .veg-box-3 .veg-content-1:after {
     transform: scale(1,0);
     transform-origin: center;
 }
-body .veg-main .veg-box-3 .veg-content-1 h4 {
-    font-size: 26px;
+body .veg-main .veg-box-3 .veg-content-1 h4 ,
+body .veg-main .veg-box-3 .m_item-veg-3 .veg-content-1-effect .rs{
+    font-size: 48px;
     color: #333333;
     font-weight: 900;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
-body .veg-main .veg-box-3 .veg-content-1 a {
-    color : #333333 ;
-    font-size: 16px;
-    display : inline-block;
+body .veg-main .veg-box-3 .veg-content-1 a,
+body .veg-main .veg-box-3 .m_item-veg-3 .veg-content-1-effect a{
+    color: #333333;
+    font-size: 22px;
+    display: inline-block;
 }
-body .veg-main .veg-box-3 .veg-content-1 a:after {
+body .veg-main .veg-box-3 .veg-content-1-effect a:after {
     content: '' ;
     border-bottom: 2px solid #222222;
     display : block ; 
@@ -241,36 +278,61 @@ body .veg-main .veg-box-3 .veg-content-1 a:after {
 body .veg-main .veg-box-3 .m_item-veg-3::after {
     content : '' ;
     position : absolute;
-    
+    top: 0;
+    bottom: 0;
+    right: 0 ;
     left: 0 ;
-    right: 0;
-    bottom: 0 ;
-    top: 0 ;
-    background: rgba(0,0,0,0.5);
+    background: rgba(61,62,65,0.8);
     z-index: 1; 
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ;
+    pointer-events: none;
+    /* transition: opacity 0.3s ; */
+    transform: translateY(50%);
+    transition: transform calc(700ms * 2) cubic-bezier(0.19, 1, 0.22, 1);
 }
 body .veg-main .veg-box-3 .m_item-veg-3:hover::after {
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
-body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-1 {
-    transform: translate3d(125px, -55px, 0px);
-    text-align: center;
+body .veg-main .veg-box-3 .m_item-veg-3 .veg-content-effect {
+    position: absolute;
+    top: 0 ;
+    left: 0 ;
+    bottom: 0 ;
+    right : 0 ;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity calc(700ms * 2) ;
 }
-body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-1:after,
-body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-1:before {
+body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-1{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-effect {
+    opacity: 1;
+    visibility: visible;
+
+}
+body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-1-effect:after,
+body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-1-effect:before {
     opacity: 1;
     filter: alpha(opacity=100);
     transform: scale(1);
 }
-body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-1 a:after {
+body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-1-effect a:after {
     border-color : #ffffff ;
 }
-body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-1 h4,
-body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-1 a {
+body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-1-effect .rs,
+body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-1-effect a {
     color : #fff ;
 }
 body .veg-main .top-m-block {
@@ -1027,38 +1089,29 @@ footer::after {
 #wrap {
     display: inline-flex;
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     padding: 0;
-    padding-right: 35px;
-    background: url(../images/icon-search.png) top 10px right 10px no-repeat #fff;
-    border: 1px solid #29a51c;
-    border-radius: 20px
+    padding-right: 15px;
+    width: 320px;
+    outline: none ; 
 }
+
 
 #wrap .click-form {
-    width: 40px;
-    height: 40px;
+    width: 33px;
+    height: 33px;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 99;
-    background: url(../images/icon-search.png) top 10px right 10px no-repeat transparent
+    background: url(../images/icon-search.png) top 0px right 0 no-repeat transparent;
 }
 
-#wrap.show {
-    width: 500px
-}
 
-#wrap.show input[type=text] {
-    width: 450px;
-    border: 1px solid #29a51c;
-    padding-left: 140px;
-    background: #fff
-}
 
 #wrap input[type=text] {
-    height: 40px;
+    height: 42px;
     border: none;
     background: 0 0;
     display: inline-block;
@@ -1066,16 +1119,21 @@ footer::after {
     padding: 0;
     width: 0;
     position: absolute;
-    top: -1px;
     z-index: 3;
     transition: width .4s cubic-bezier(0, .795, 0, 1);
     cursor: pointer;
-    max-width: 500px;
-    border-radius: 20px;
-    right: -1px;
-    outline: 0
+    max-width: 320px;
+    width: 100%;
+    border-bottom: 2px solid #333333;
+    padding-left: 50px;
+    background: #fff;
+    right: 0px;
+    outline: none; 
 }
-
+#wrap input[type=text]::placeholder {
+    font-size: 16px;
+    color : #333333 ; 
+}
 #wrap input[type=submit] {
     height: 38px;
     width: 39px;
@@ -1097,7 +1155,8 @@ footer::after {
 }
 
 .box-search {
-    border: none !important
+    border: none !important;
+    margin-right: 110px;
 }
 
 .cat-search {
@@ -1196,4 +1255,151 @@ padding: 0
 
 section#slide-banner {
     min-height: 50px;
+}
+.list-home-cate {
+    padding: 25px 0;
+}
+.list-home-cate .home-cate{
+    display : flex; 
+    flex-wrap : wrap ; 
+    margin: 0 -15px;
+}
+.list-home-cate .home-cate .home-cate-item {
+    flex: 0 0 20%;
+    max-width: 240px;
+    margin: auto;
+    padding: 0 15px; 
+}
+.home-cate-item .home-cate-img {
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    padding-top: 100%;
+    position: relative;
+    width: 100%;
+    box-shadow: 1px 1px 8px 4px rgba(148,146,146,0.25);
+}
+.home-cate-item .home-cate-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s ease-in-out;
+}
+.home-cate-item .home-cate-info {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+}
+.home-cate-item .home-cate-info .home-cate-name{
+    color : #333333 ;
+    font-size: 24px;
+    display: block; 
+    line-height: 1.2;
+}
+.home-cate-item .home-cate-info .home-cate-count {
+    color: #b0b0b0;
+    display: inherit;
+    margin-top: 5px;
+}
+.list-home-cate .home-cate .home-cate-item:hover .home-cate-img img{
+    transform: scale(1.1);
+}
+@media (max-width: 1650px) {
+    body .veg-main .veg-box-3 .veg-content-1 h4 {
+        font-size: 36px;
+    }
+    body .veg-main .veg-box-3 .veg-content-1 a {
+        font-size: 20px;
+    }
+}
+@media (max-width: 1200px) {
+    body .header-top {
+        font-size: 16px;
+        padding: 15px;
+    }
+    body .header-top i {
+        font-size: 18px;
+    }
+    body .menu-header .lst-menu li .nav-link {
+        font-size: 14px;
+    }
+    .box-search {
+        margin-right: 25px;
+    }
+    #wrap {
+        width: 250px;
+        height: 38px;
+    }
+    #wrap input[type=text] {
+        height: 38px;
+        padding-left: 35px;
+    }
+    #wrap .click-form {
+        
+        top: 4px;
+        width: 25px;
+        height: 25px;
+        background-size: cover;
+    }
+    body .menu-header .right-menu .box-cart i, body .menu-header .right-menu .box-search i {
+        font-size: 26px;
+    }
+    body .menu-header .right-menu .box-cart .num_cart {
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        background-color: #f47423;
+        border-radius: 50%;
+        top: -9px;
+        right: -13px;
+        font-size: 12px;
+    }
+    body .veg-main .veg-box-3 .veg-content-1,
+    body .veg-main .veg-box-3 .m_item-veg-3 .veg-content-1-effect {
+        padding: 15px; 
+    }
+    body .veg-main .veg-box-3 .veg-content-1 h4 ,
+    body .veg-main .veg-box-3 .m_item-veg-3 .veg-content-1-effect .rs{
+        font-size: 24px;
+    }
+    body .veg-main .veg-box-3 .veg-content-1 a,
+    body .veg-main .veg-box-3 .m_item-veg-3 .veg-content-1-effect a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .list-home-cate .home-cate .home-cate-item {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+@media (max-width: 768px ) {
+    body .veg-main .col-padding-0 .item-veg-3 {
+        padding: 5px 15px; 
+    }
+    body .veg-main .veg-box-3 .m_item-veg-3 {
+        max-width: 310px;
+        margin: 0 auto ; 
+        border-radius: 5px;
+    }
+    body .veg-main .veg-box-3 .m_item-veg-3 > img {
+        height: 310px; 
+    }
+
+}
+
+@media (max-width: 575px ) {
+    body .veg-main .veg-box-3 .m_item-veg-3 {
+        max-width: 100%;
+    }
+    body .veg-main .veg-box-3 .m_item-veg-3 > img {
+        height: 100%; 
+    }
 }

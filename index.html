@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Home</title>
+
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" >
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
@@ -13,8 +17,21 @@
 </head>
 <body class="home">
 <div class="wrapper">
+    <div class="header-top d-none d-md-inline-block w-100">
+        <div class="container">
+            <div class="float-right">
+                <a href="mailto:aaaa@gmail.com" class="evelope">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+
+                    <span>
+                        lienhe@miyagevn@gmail.com
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
     <!--header-mobile-->
-    <header class="d-block d-sm-block d-md-none">
+    <header class="d-block d-md-block d-lg-none">
         <div class="d-flex align-items-center  header-mb">
             <div class=""><a href="#menu" class="toggle-menu d-flex align-items-center" aria-role="button"><img src="images/icon-menu-mb.png" data-zoom="https://demos.imgix.net/wristwatch.jpg?w=1000&ch=DPR&dpr=2"/></a></div>
             <div class="flex_1 _logo flex_center">
@@ -23,11 +40,13 @@
                 </a>
             </div>
             <div class="box-right d-flex flex-row">
-                <div class="box-search flex_center">
-                    <a href="javascript:void(0);" class="icon-search"><img src="images/icon-search.png"/></a>
+                <div class="box-search mr-0 flex_center">
+                    <a href="javascript:void(0);" class="icon-search" id="icon-search-mb">
+                        <img src="images/icon-search.png" width="20" height="20"/>
+                    </a>
                 </div>
                 <div class="box-cart flex_center position-relative">
-                    <a href="#" class="icon-cart"><img src="images/icon-cart.png"/></a>
+                    <i class="fa fa-shopping-cart text-22" aria-hidden="true"></i>
                     <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
                 </div>
             </div>
@@ -53,9 +72,19 @@
             </ul>
         </div>
     </nav>
-    <!--header-mobile-->
+    <div class="box-search-mb">
+        <form method="GET" action="https://vuonan.vn/search" accept-charset="UTF-8" autocomplete="on">
+            <div class="box-input form-group">
+                <input type="text" name="search" placeholder="Nhập từ khóa tìm kiếm" class="w-100 form-control">
+            </div>
+            <div class="d-flex justify-content-center">
+                <input id="search_submit" value="Tìm kiếm" class="btn btn-primary" type="submit">
+            </div>
+        </form>
+    </div>
+    <!--header-pc-->
     <header>
-        <div class="container d-md-block d-sm-none d-none">
+        <div class="container d-lg-block d-md-none d-none">
             <div class="row menu-header align-items-center">
                 <div class="logo">
                     <a href="#"><img src="images/logo.png"/></a>
@@ -71,18 +100,28 @@
                             <a class="dropdown-item" href="#">Sản phẩm khác</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link ">Khuyến mại</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link ">Liên hệ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link ">Blog</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link ">Tuyển dụng</a></li>
                 </ul>
                 <div class="right-menu flex_center">
                     <div class="box-search flex_center">
-                        <a href="javascript:void(0);" class="icon-search"><img src="images/icon-search.png"/></a>
+                        <form method="GET" action="" accept-charset="UTF-8" autocomplete="on" id="wrap" class="">
+                            <a href="javascript:void(0);" class="click-form"></a>
+                            <input id="search" name="search" type="text" placeholder="Tìm kiếm">
+                            <input id="search_submit" value="Rechercher" type="submit">
+                        </form>
+
+                        <a href="javascript:void(0);" class="icon-search d-block d-md-none">
+                            <img src="images/icon-search.png">
+                        </a>
                     </div>
                     <div class="box-cart flex_center position-relative">
-                        <a href="#" class="icon-cart"><img src="images/icon-cart.png"/></a>
+                        <a href="#" class="icon-cart">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
                         <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
                     </div>
-                    <div class="box-login-res flex_center">
+                    <!-- <div class="box-login-res flex_center">
                         <div class="d-flex align-items-center icon-user"><img src="images/icon-user.png"/></div>
                         <div class="d-flex flex-column">
                             <div class="_login">
@@ -90,7 +129,7 @@
                             </div>
                             <span class="name-des">Tài khoản</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -107,28 +146,46 @@
                 <div class="row veg-box-3 col-padding-0">
                     <div class="col-md-4 item-veg-3">
                         <div class="m_item-veg-3  position-relative ">
-                            <img src="images/img-veg-1.jpg" class="w-100"/>
+                            <img src="http://via.placeholder.com/473x413" class="w-100"/>
                             <div class="position-absolute veg-content-1 ">
                                 <h4 class="rs">Quà tặng</h4>
                                 <a href="#">Mua ngay</a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 item-veg-3">
-                        <div class="m_item-veg-3  position-relative">
-                            <img src="images/img-veg-2.jpg" class="w-100"/>
-                            <div class="position-absolute  veg-content-1  ">
-                                <h4 class="rs">Hoa quả</h4>
-                                <a href="#">Mua ngay</a>
+                            <div class="veg-content-effect">
+                                <div class=" veg-content-1-effect ">
+                                    <span class="rs">Quà tặng</span>
+                                    <a href="#">Mua ngay</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 item-veg-3">
                         <div class="m_item-veg-3  position-relative">
-                            <img src="images/img-veg-3.jpg" class="w-100"/>
-                            <div class="position-absolute veg-content-1">
+                            <img src="http://via.placeholder.com/473x413" class="w-100"/>
+                            <div class="position-absolute veg-content-1 ">
+                                <h4 class="rs">Hoa quả</h4>
+                                <a href="#">Mua ngay</a>
+                            </div>
+                            <div class="veg-content-effect">
+                                <div class=" veg-content-1-effect ">
+                                    <span class="rs">Hoa quả</span>
+                                    <a href="#">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 item-veg-3">
+                        <div class="m_item-veg-3  position-relative">
+                            <img src="http://via.placeholder.com/473x413" class="w-100"/>
+                            <div class="position-absolute veg-content-1 ">
                                 <h4 class="rs">Thực phẩm</h4>
                                 <a href="#">Mua ngay</a>
+                            </div>
+                            <div class="veg-content-effect">
+                                <div class=" veg-content-1-effect ">
+                                    <span class="rs">Thực phẩm</span>
+                                    <a href="#">Mua ngay</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -140,9 +197,73 @@
                     <div class="w-100 flex_center title">
                         Danh mục sản phẩm 
                     </div>
-                    <div class="list-home-cate">
+                    <div class="list-home-cate w-100 d-inline-block">
                         <div class="home-cate">
-                            
+                            <div class="home-cate-item">
+                                <a href="javascript:;" class="home-cate-img">
+                                    <img src="http://via.placeholder.com/200x400" alt="">
+                                </a>
+                                <div class="home-cate-info">
+                                    <a href="javascript:;" class="home-cate-name">
+                                        Hoa quả Nhật
+                                    </a>
+                                    <span class="home-cate-count">
+                                        33 sản phẩm
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="home-cate-item">
+                                <a href="javascript:;" class="home-cate-img">
+                                    <img src="http://via.placeholder.com/400x400" alt="">
+                                </a>
+                                <div class="home-cate-info">
+                                    <a href="javascript:;" class="home-cate-name">
+                                        Hoa quả Nhật
+                                    </a>
+                                    <span class="home-cate-count">
+                                        33 sản phẩm
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="home-cate-item">
+                                <a href="javascript:;" class="home-cate-img">
+                                    <img src="http://via.placeholder.com/400x400" alt="">
+                                </a>
+                                <div class="home-cate-info">
+                                    <a href="javascript:;" class="home-cate-name">
+                                        Hoa quả Nhật
+                                    </a>
+                                    <span class="home-cate-count">
+                                        33 sản phẩm
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="home-cate-item">
+                                <a href="javascript:;" class="home-cate-img">
+                                    <img src="http://via.placeholder.com/400x400" alt="">
+                                </a>
+                                <div class="home-cate-info">
+                                    <a href="javascript:;" class="home-cate-name">
+                                        Hoa quả Nhật
+                                    </a>
+                                    <span class="home-cate-count">
+                                        33 sản phẩm
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="home-cate-item">
+                                <a href="javascript:;" class="home-cate-img">
+                                    <img src="http://via.placeholder.com/400x400" alt="">
+                                </a>
+                                <div class="home-cate-info">
+                                    <a href="javascript:;" class="home-cate-name">
+                                        Hoa quả Nhật
+                                    </a>
+                                    <span class="home-cate-count">
+                                        33 sản phẩm
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
