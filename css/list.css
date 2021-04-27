@@ -35,30 +35,35 @@
 }
 
 .main-lst .lst-left .box-left {
-    border: 1px solid #d1d1d1;
     min-height: 200px;
-    border-radius: 5px;
-    margin-bottom: 20px
+    margin-bottom: 30px;
 }
 
 .main-lst .lst-left .box-left .title {
-    margin: 0 18px;
     color: #000;
     font-weight: 700;
     height: 50px;
-    border-bottom: 1px solid #d1d1d1
+    margin:0 5px; 
+    border-bottom: 1px solid #d1d1d1;
+    font-size: 24px;
+    text-transform: uppercase;
 }
 
 .main-lst .lst-left .box-left ul.lst-product li {
     height: 44px;
     display: flex;
     align-items: center;
-    border-left: 3px solid #fff
+    justify-content: space-between;
+    margin:0 5px; 
 }
-
-.main-lst .lst-left .box-left ul.lst-product li:hover {
-    border-left: 3px solid #ff9205;
-    background: #f2f2f2
+.main-lst .lst-left .box-left ul.lst-product li span.count {
+    background-color: #ff7e36;
+    color: #fff;
+    display: inline-block;
+    width: 50px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 16px;
 }
 
 .main-lst .lst-left .box-left ul.lst-product li:hover a {
@@ -66,49 +71,11 @@
 }
 
 .main-lst .lst-left .box-left ul.lst-product li a {
-    color: #000;
-    padding-left: 52px
+    color: #828282;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.main-lst .lst-left .box-left ul.lst-product .icon-1 {
-    background: url(../images/list/icon-1-b.png) top 10px left 20px no-repeat
-}
-
-.main-lst .lst-left .box-left ul.lst-product .icon-1:hover {
-    background: url(../images/list/icon-1.png) top 10px left 20px no-repeat
-}
-
-.main-lst .lst-left .box-left ul.lst-product .icon-2 {
-    background: url(../images/list/icon-2-b.png) top 10px left 20px no-repeat
-}
-
-.main-lst .lst-left .box-left ul.lst-product .icon-2:hover {
-    background: url(../images/list/icon-2.png) top 10px left 20px no-repeat
-}
-
-.main-lst .lst-left .box-left ul.lst-product .icon-3 {
-    background: url(../images/list/icon-3-b.png) top 10px left 20px no-repeat
-}
-
-.main-lst .lst-left .box-left ul.lst-product .icon-3:hover {
-    background: url(../images/list/icon-3.png) top 10px left 20px no-repeat
-}
-
-.main-lst .lst-left .box-left ul.lst-product .icon-4 {
-    background: url(../images/list/icon-4-b.png) top 10px left 20px no-repeat
-}
-
-.main-lst .lst-left .box-left ul.lst-product .icon-4:hover {
-    background: url(../images/list/icon-4.png) top 10px left 20px no-repeat
-}
-
-.main-lst .lst-left .box-left ul.lst-product .icon-5 {
-    background: url(../images/list/icon-5-b.png) top 10px left 20px no-repeat
-}
-
-.main-lst .lst-left .box-left ul.lst-product .icon-5:hover {
-    background: url(../images/list/icon-5.png) top 10px left 20px no-repeat
-}
 
 .main-lst .lst-left .box-left .lst-weight {
     flex-wrap: wrap;

@@ -7,6 +7,8 @@
     <title>Home</title>
 
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" >
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -17,8 +19,8 @@
 </head>
 <body class="home">
 <div class="wrapper">
-    <div class="header-top d-none d-md-inline-block w-100">
-        <div class="container">
+    <div class="header-top d-none d-md-block float-md-left w-100">
+        <div class="container custom-container">
             <div class="float-right">
                 <a href="mailto:aaaa@gmail.com" class="evelope">
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
@@ -46,7 +48,7 @@
                     </a>
                 </div>
                 <div class="box-cart flex_center position-relative">
-                    <i class="fa fa-shopping-cart text-22" aria-hidden="true"></i>
+                    <img src="images/icon-cart.png" alt="" class="img-fluid">
                     <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
                 </div>
             </div>
@@ -117,7 +119,7 @@
                     </div>
                     <div class="box-cart flex_center position-relative">
                         <a href="#" class="icon-cart">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <img src="images/icon-cart.png" alt="" class="img-fluid">
                         </a>
                         <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
                     </div>
@@ -134,65 +136,72 @@
             </div>
         </div>
     </header>
+
     <main>
         <!--  banner home-->
-        <section class="row lazy slider" data-sizes="50vw" id="slide-banner">
-            <div>
-                <img class="d-none-notimportant w-100" src="images/img-banner.jpg" alt="First slide">
+        <section class="row " >
+            <div class="lazy slider" id="slide-banner">
+                <div class="d-inline-block w-100">
+                    <img class="img-fluid w-100" src="images/img-banner.jpg" alt="First slide">
+                </div>
             </div>
+          
         </section>
         <!-- end banenr home-->
 
         <div class="w-100 veg-main">
             <div class="container">
                 <!---box- top- main-->
-                <div class="row veg-box-3 col-padding-0">
-                    <div class="col-md-4 item-veg-3">
-                        <div class="m_item-veg-3  position-relative ">
-                            <img src="images/img-veg-1-new.jpg" class="w-100"/>
-                            <div class="position-absolute veg-content-1 ">
-                                <h4 class="rs">Quà tặng</h4>
-                                <a href="javascript:;" onclick="openFixedCart()">Mua ngay</a>
-                            </div>
-                            <div class="veg-content-effect">
-                                <div class=" veg-content-1-effect ">
-                                    <span class="rs">Quà tặng</span>
+                <div class="box-home-banners">
+                    <div class="row veg-box-3 col-padding-0">
+                        <div class="col-md-4 item-veg-3">
+                            <div class="m_item-veg-3  position-relative ">
+                                <img src="images/img-veg-1-new.jpg" class="w-100"/>
+                                <div class="position-absolute veg-content-1 ">
+                                    <h4 class="rs">Quà tặng</h4>
                                     <a href="javascript:;" onclick="openFixedCart()">Mua ngay</a>
+                                </div>
+                                <div class="veg-content-effect">
+                                    <div class=" veg-content-1-effect ">
+                                        <span class="rs">Quà tặng</span>
+                                        <a href="javascript:;" onclick="openFixedCart()">Mua ngay</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 item-veg-3">
-                        <div class="m_item-veg-3  position-relative">
-                            <img src="images/img-veg-2-new.jpg" class="w-100"/>
-                            <div class="position-absolute veg-content-1 ">
-                                <h4 class="rs">Hoa quả</h4>
-                                <a href="javascript:;" onclick="openFixedCart()">Mua ngay</a>
-                            </div>
-                            <div class="veg-content-effect">
-                                <div class=" veg-content-1-effect ">
-                                    <span class="rs">Hoa quả</span>
+                        <div class="col-md-4 item-veg-3">
+                            <div class="m_item-veg-3  position-relative">
+                                <img src="images/img-veg-2-new.jpg" class="w-100"/>
+                                <div class="position-absolute veg-content-1 ">
+                                    <h4 class="rs">Hoa quả</h4>
                                     <a href="javascript:;" onclick="openFixedCart()">Mua ngay</a>
+                                </div>
+                                <div class="veg-content-effect">
+                                    <div class=" veg-content-1-effect ">
+                                        <span class="rs">Hoa quả</span>
+                                        <a href="javascript:;" onclick="openFixedCart()">Mua ngay</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 item-veg-3">
-                        <div class="m_item-veg-3  position-relative">
-                            <img src="images/img-veg-3-new.jpg" class="w-100"/>
-                            <div class="position-absolute veg-content-1 ">
-                                <h4 class="rs">Thực phẩm</h4>
-                                <a href="javascript:;" onclick="openFixedCart()">Mua ngay</a>
-                            </div>
-                            <div class="veg-content-effect">
-                                <div class=" veg-content-1-effect ">
-                                    <span class="rs">Thực phẩm</span>
+                        <div class="col-md-4 item-veg-3">
+                            <div class="m_item-veg-3  position-relative">
+                                <img src="images/img-veg-3-new.jpg" class="w-100"/>
+                                <div class="position-absolute veg-content-1 ">
+                                    <h4 class="rs">Thực phẩm</h4>
                                     <a href="javascript:;" onclick="openFixedCart()">Mua ngay</a>
+                                </div>
+                                <div class="veg-content-effect">
+                                    <div class=" veg-content-1-effect ">
+                                        <span class="rs">Thực phẩm</span>
+                                        <a href="javascript:;" onclick="openFixedCart()">Mua ngay</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+               
                 <!---box- top- main-->
 
                 <!-- box danh muc sp -->
@@ -281,7 +290,8 @@
                             Sản phẩm bán chạy 
                         </h2>
                         <div class="list-featured-product ">
-                            <section class="regular slider-tab d-md-block d-none d-sm-none">
+                            <section class="d-md-block d-none d-sm-none">
+                            <div class="regular slider-tab ">
                                 <div class="item-veg-4">
                                     <div class="m_item-veg-4">
                                         <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
@@ -314,6 +324,13 @@
                                             <strike>100.000đ</strike>
                                             <div>90.000đ </div>
                                         </div>
+
+                                        <div class="discount-percent">
+                                            <span>
+                                                - 50%
+                                            </span>
+                                        </div>
+
                                         <!---icon-view-->
                                         <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
                                             <a href="javascript:void(0);" class="icon-cart">
@@ -335,6 +352,11 @@
                                               </a> </h6>
                                             <strike>100.000đ</strike>
                                             <div>90.000đ </div>
+                                        </div>
+                                        <div class="discount-percent">
+                                            <span>
+                                                - 20%
+                                            </span>
                                         </div>
                                         <!---icon-view-->
                                         <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
@@ -458,7 +480,9 @@
                                         <!---icon-view-->
                                     </div>
                                 </div>
+                            </div>
                             </section>
+
 
                             <!---danh sách hiển thị trên mobile-->
                             <div class="row veg-box-4 d-md-none d-block d-sm-block">
@@ -1054,7 +1078,7 @@
 </div>
 
 </body>
-<script src="js/jquery-3.1.1.min.js" ></script>
+
 <script type="text/javascript" src="js/jquery-3.1.1.min.js?ver=122"></script>
 <script type="text/javascript" src="js/popper.min.js?ver=122"></script>
 <script type="text/javascript" src="js/bootstrap.min.js?ver=122"></script>

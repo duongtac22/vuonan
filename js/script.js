@@ -1,5 +1,10 @@
 // $('.lazyload').lazy();
-
+function formatCurrency(a) {
+    var b = parseFloat(a).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1.").toString();
+    var len = b.length;
+    b = b.substring(0, len - 3);
+    return b;
+  }
 function demnguoc(endTime, holder) {
     var days = Math.floor(endTime / (60 * 60 * 24));
     var hours = Math.floor((endTime % (60 * 60 * 24)) / (60 * 60));
@@ -28,12 +33,10 @@ function closeFixedCart() {
     
 }
 $(document).ready(function() {
-    $(".lazy").slick({
+    $("#slide-banner").slick({
         slidesToShow: 1,
         slidesToScroll:1,
         infinite: true,
-        autoplay: true,
-        autoplaySpeed: 4000,
     });
     $(".regular").slick({
         dots: true,
@@ -50,7 +53,7 @@ $(document).ready(function() {
                 slidesToScroll: 1,
               }
             },
-          ]
+        ]
     });
     $(".review-home-slider").slick({
         dots: true,
@@ -76,18 +79,20 @@ $(document).ready(function() {
               },
           ]
     });
-    $(".regular-2").slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll:1
-    });
+    // $(".regular-2").slick({
+    //     dots: true,
+    //     infinite: true,
+    //     slidesToShow: 4,
+    //     slidesToScroll:1
+    // });
+
     if($('.js-count').length > 0 ) {
         $(".js-count").each(function () {
             let endTime = $(this).attr("data-end");
             demnguoc(endTime, this);
         });
     }
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
             $('#back-to-top').fadeIn();
