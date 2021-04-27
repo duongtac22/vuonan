@@ -388,11 +388,12 @@ body .veg-main  .item-veg-4 .m_item-veg-4 .m4_detail {
     width: 100%;
 }
 
-body .veg-main .item-veg-4 .m_item-veg-4 .m4_detail h6 {
+body .veg-main .item-veg-4 .m_item-veg-4 .m4_detail h6 a{
     font-size: 16px;
     color: #212121;
     font-weight: 900;
     height: 40px;
+    display: inline-block;
     overflow: hidden
 }
 
@@ -401,7 +402,7 @@ body .veg-main .item-veg-4 .m_item-veg-4 .m4_detail strike {
     color: #929292;
     height: 30px;
     float: left;
-    width: 50%;
+    margin-right: 15px;
     line-height: 30px;
 }
 
@@ -411,7 +412,6 @@ body .veg-main  .item-veg-4 .m_item-veg-4 .m4_detail div {
     font-family: Arial, sans-serif;
     font-weight: 700;
     float: left;
-    width: 50%;
 }
 
 body .veg-main .item-veg-4 .m_item-veg-4 .m4_detail div span {
@@ -1618,6 +1618,7 @@ section#slide-banner {
 }
 .block-home-review .slick-dots li.slick-active {
     background: #ff7e36;
+    border-color : #ff7e36 ; 
 }
 .block-home-article {
     background : url(../images/bg-block-home.jpg) center no-repeat;
@@ -1719,6 +1720,10 @@ div#popup-cart {
     overflow: hidden;
     width: 100%;
     height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+    pointer-events: none;
 }
 
 div#popup-cart .bg-opacity {
@@ -1730,7 +1735,15 @@ div#popup-cart .bg-opacity {
     width: 100%;
     height: 100%;
 }
+div#popup-cart.slide-in .cart-popup-content {
+    right: 0;
+}
 
+div#popup-cart.slide-in {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: unset;
+}
 .cart-popup-content {
     position: fixed;
     top: 0;
@@ -1738,12 +1751,12 @@ div#popup-cart .bg-opacity {
     max-width: 500px;
     height: 100%;
     right: 0;
-    z-index: 9;
     background: #fff;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     z-index: 1000;
     transition: right 0.3s;
+    right: -100%;
 }
 
 .cart-popup-content .title {
@@ -1753,31 +1766,35 @@ div#popup-cart .bg-opacity {
     padding: 25px;
     border-bottom: 1px solid #333333;
 }
-.list-cart-popup-item {
+.cart-popup-content .title h3 {
+    font-size: 20px; 
+    margin  : 0 ; 
+}
+.cart-popup-content .list-cart-popup-item {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-.cart-popup-item {
+.cart-popup-content .list-cart-popup-item .cart-popup-item {
     padding: 15px;
     display: flex;
     align-items: flex-start;
     flex-direction: row;
 }
 
-a.cart-popup-img {
+.cart-popup-content .list-cart-popup-item a.cart-popup-img {
     flex: 0 0 33.333%;
     max-width: 33.333%;
     padding: 10px;
 }
 
-a.del-cart {
+.cart-popup-content .list-cart-popup-item a.del-cart {
     align-self: flex-start;
     margin-right: 20px;
 }
 
-a.del-cart i {
+.cart-popup-content .list-cart-popup-item a.del-cart i {
     font-size: 18px;
     color: #a9a6a6;
 }
@@ -1794,8 +1811,7 @@ a.del-cart i {
      font-size: 16px;
     color: #212121;
     font-weight: 900;
-    height: 40px;
-    overflow: hidden;
+    text-align: right;
 }
 .cart-popup-info strike {
     font-weight: 700;
@@ -1807,6 +1823,50 @@ a.del-cart i {
     color: #c71616;
     font-family: Arial, sans-serif;
     font-weight: 700;
+}
+.cart-popup-content .cart-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: 1px solid #d6d6d6;
+} 
+.cart-popup-content .cart-total b {
+    font-size: 24px;
+}
+.cart-popup-content .cart-total .cart-total-price {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cart-popup-content .cart-total .cart-total-price .final-price {
+    font-size: 24px;
+    color: #c71616;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+.cart-popup-content .cart-total .cart-total-price small {
+    font-size: 12px;
+    color: #929292;
+}
+
+
+.cart-popup-content .cart-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.cart-popup-content .cart-actions a {
+    margin-left: 15px;
+    display: inline-block;
+    background: #929292;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.cart-popup-content .cart-actions a.color-orange {
+    background-color : #ff7e36 ;
 }
 @media (max-width: 1650px) {
     body .veg-main .veg-box-3 .veg-content-1 h4 {
@@ -1960,29 +2020,34 @@ a.del-cart i {
 }
 @media (max-width: 768px ) {
     body .veg-main .col-padding-0 .item-veg-3 {
-        padding: 7.5px 15px; 
+        padding: 15px; 
+    }
+    body .veg-main .veg-box-3 {
+        margin-bottom: 30px; 
     }
     body .veg-main .veg-box-3 .m_item-veg-3 {
-        max-width: 310px;
+        max-width: 100%;
         margin: 0 auto ; 
         border-radius: 5px;
+    }
+    .top-m-block {
+        padding: 25px 0 ; 
     }
     /* body .veg-main .veg-box-3 .m_item-veg-3 > img {
         height: 100%; 
     } */
+    .block-home-featured {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
     .list-home-cate .home-cate {
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        margin: 0 -5px;
+        margin: 0 ;
+        justify-content: flex-start;
     }
     .list-home-cate .home-cate .home-cate-item {
-        flex-grow: 0;
-        flex: 0 0 100px;
-        max-width: 100px;
-        flex-shrink: 0;
-        padding: 0 5px;
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin: 0;
     }
     .block-home-featured .block-home-featured-wrap {
         padding: 15px;
@@ -2040,6 +2105,27 @@ a.del-cart i {
     }
     .block-home-article .list-article-home .article-home .article-info .view {
         line-height: 39px;
+        font-size: 14px;
+    }
+    .cart-popup-content .list-cart-popup-item a.cart-popup-img{
+        flex: 0 0 100px; 
+        max-width: 100px;
+        padding: 0 ; 
+    }
+    .cart-popup-content .title {
+        padding: 15px; 
+    }
+    .cart-popup-content .list-cart-popup-item a.del-cart {
+        margin-right: 10px; 
+    }
+    .cart-popup-content .list-cart-popup-item a.del-cart i {
+        font-size: 15px; 
+    }
+    .cart-popup-info {
+        padding-top: 0 ;
+        padding-bottom: 0 ; 
+    }
+    .cart-popup-info .cart-popup-name{
         font-size: 14px;
     }
 }

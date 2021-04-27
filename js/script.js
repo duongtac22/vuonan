@@ -1,4 +1,5 @@
 // $('.lazyload').lazy();
+
 function demnguoc(endTime, holder) {
     var days = Math.floor(endTime / (60 * 60 * 24));
     var hours = Math.floor((endTime % (60 * 60 * 24)) / (60 * 60));
@@ -13,8 +14,19 @@ function demnguoc(endTime, holder) {
     setTimeout(function () {
         demnguoc(endTime - 1, holder);
     }, 1000);
-    }
+}
+function openFixedCart() {
+    
+    $('body').addClass('fixed-open');
+    $('#popup-cart').addClass('slide-in');
+    
+}
+function closeFixedCart() {
 
+    $('body').removeClass('fixed-open');
+    $('#popup-cart').removeClass('slide-in');
+    
+}
 $(document).ready(function() {
     $(".lazy").slick({
         slidesToShow: 1,
