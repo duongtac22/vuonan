@@ -8,21 +8,24 @@
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" >
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/mobile.css">
+    
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+
     <link rel="stylesheet" href="css/list.css">
     <link rel="stylesheet" href="css/range-search.css">
     <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
 </head>
 <body class="">
 <div class="wrapper">
-    <div class="header-top d-none d-md-inline-block w-100">
-        <div class="container">
+    <div class="header-top d-none d-md-block float-md-left w-100">
+        <div class="container custom-container">
             <div class="float-right">
                 <a href="mailto:aaaa@gmail.com" class="evelope">
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
@@ -50,7 +53,7 @@
                     </a>
                 </div>
                 <div class="box-cart flex_center position-relative">
-                    <i class="fa fa-shopping-cart text-22" aria-hidden="true"></i>
+                    <img src="images/icon-cart.png" alt="" class="img-fluid">
                     <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
                 </div>
             </div>
@@ -121,7 +124,7 @@
                     </div>
                     <div class="box-cart flex_center position-relative">
                         <a href="#" class="icon-cart">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <img src="images/icon-cart.png" alt="" class="img-fluid">
                         </a>
                         <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
                     </div>
@@ -157,8 +160,8 @@
         <div class="w-100 veg-main veg-list">
             <div class="container">
                 <div class="row main-lst">
-                    <div class="col-md-4 d-none d-md-block">
-                        <div class="row lst-left">
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <div class="lst-left">
                             <div class="box-left w-100">
                                 <div class="title d-flex align-items-center">DANH SÁCH SẢN PHẨM</div>
                                 <ul class="rs lst-product list-group">
@@ -196,23 +199,44 @@
                             </div>
                             <div class="box-left w-100">
                                 <div class="title d-flex align-items-center">Giá</div>
-                                <div id="slider-range"></div>
-                                <p id="amount" style="margin: 0;padding-top: 10px;">
-                                  0 VND - 5.000.000 VND
-                                </p>
+                                <div class="box-price-range">
+                                    <div id="slider-range"></div>
+                                   
+                                    <p >
+                                        Khoảng giá : 
+                                        <b id="amount">   0 VND - 5.000.000 VND </b>
+                                    </p>
+                                </div>
+                               
+                            </div>
+                            <div class="box-left w-100">
+                                <div class="title d-flex align-items-center">Thương hiệu</div>
+                                <ul class="rs lst-product list-group">
+                                    <li class="list-inline-item ">
+                                        <a href="#">Rau sạch</a>
+                                    </li>
+                                    <li class="list-inline-item ">
+                                        <a href="#">Củ sạch</a>
+                                    </li>
+                                    <li class="list-inline-item ">
+                                        <a href="#">Quả ngọt</a>
+                                    </li>
+                                    <li class="list-inline-item ">
+                                        <a href="#">Sản phẩm đặc biệt</a>
+                                    </li>
+                                    <li class="list-inline-item ">
+                                        <a href="#">Các loại rau củ quả khác</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8 col-12">
+                    <div class="col-lg-8 col-12">
                         <div class="top-right d-flex">
-                            <div class="w-50 left">
-                                <h4>Rau sạch</h4>
-                                <span>Có 170 sản phẩm</span>
-                            </div>
                             <div class="w-50 d-flex align-items-end justify-content-end">
-                                <label>Hiển thị:</label>
                                 <div class="custom-select">
                                     <select>
+                                        <option value="0">Sắn xếp</option>
                                         <option value="1">Mới cập nhất</option>
                                         <option value="2">Mua nhiều nhất</option>
                                         <option value="3">Đang khuyến mại</option>
@@ -221,9 +245,21 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="w-50 d-flex align-items-center justify-content-end layout-options">
+                                <span class="icons list active">
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 14C19.5523 14 20 14.4477 20 15C20 15.5523 19.5523 16 19 16H5C4.44772 16 4 15.5523 4 15C4 14.4477 4.44772 14 5 14H19ZM19 7C19.5523 7 20 7.44772 20 8C20 8.55229 19.5523 9 19 9H5C4.44772 9 4 8.55229 4 8C4 7.44772 4.44772 7 5 7H19ZM19 0C19.5523 0 20 0.447715 20 1C20 1.55228 19.5523 2 19 2H5C4.44772 2 4 1.55228 4 1C4 0.447715 4.44772 0 5 0H19ZM0 0H2V2H0V0ZM0 7H2V9H0V7ZM0 14H2V16H0V14Z" fill="black"/>
+                                    </svg>                                        
+                                </span>
+                                <span class="icons grid">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 11C18.6569 11 20 12.3431 20 14V17C20 18.6569 18.6569 20 17 20H14C12.3431 20 11 18.6569 11 17V14C11 12.3431 12.3431 11 14 11H17ZM6 11C7.65685 11 9 12.3431 9 14V17C9 18.6569 7.65685 20 6 20H3C1.34315 20 0 18.6569 0 17V14C0 12.3431 1.34315 11 3 11H6ZM17 13H14C13.4477 13 13 13.4477 13 14V17C13 17.5523 13.4477 18 14 18H17C17.5523 18 18 17.5523 18 17V14C18 13.4477 17.5523 13 17 13ZM6 13H3C2.44772 13 2 13.4477 2 14V17C2 17.5523 2.44772 18 3 18H6C6.55228 18 7 17.5523 7 17V14C7 13.4477 6.55228 13 6 13ZM6 0C7.65685 0 9 1.34315 9 3V6C9 7.65685 7.65685 9 6 9H3C1.34315 9 0 7.65685 0 6V3C0 1.34315 1.34315 0 3 0H6ZM17 0C18.6569 0 20 1.34315 20 3V6C20 7.65685 18.6569 9 17 9H14C12.3431 9 11 7.65685 11 6V3C11 1.34315 12.3431 0 14 0H17ZM6 2H3C2.44772 2 2 2.44772 2 3V6C2 6.55228 2.44772 7 3 7H6C6.55228 7 7 6.55228 7 6V3C7 2.44772 6.55228 2 6 2ZM17 2H14C13.4477 2 13 2.44772 13 3V6C13 6.55228 13.4477 7 14 7H17C17.5523 7 18 6.55228 18 6V3C18 2.44772 17.5523 2 17 2Z" fill="black"/>
+                                    </svg>                                                                              
+                                </span>
+                            </div>
                         </div>
                         <div class= " veg-box-4 row">
-                            <div class="col-md-4 ">
+                            <div class="col-md-6 col-lg-4 ">
                                 <div class="item-veg-4">
                                     <div class="m_item-veg-4">
                                         <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
@@ -247,7 +283,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 ">
+                            <div class="col-md-6 col-lg-4 ">
                                 <div class="item-veg-4">
                                     <div class="m_item-veg-4">
                                         <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
@@ -271,36 +307,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 ">
-                                <div class="item-veg-4">
-                                    <div class="m_item-veg-4">
-                                        <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
-                                        <div class="m4_detail">
-                                            <h6 class="rs"> <a href="">
-                                                Xà lách mới về
-                                              </a> </h6>
-                                            <strike>100.000đ</strike>
-                                            <div>90.000đ </div>
-                                        </div>
-                                        <div class="discount-percent">
-                                            <span>
-                                                - 50%
-                                            </span>
-                                        </div>
-                                        <!---icon-view-->
-                                        <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                            <a href="javascript:void(0);" class="icon-cart">
-                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                <span>
-                                                    Giỏ hàng
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!---icon-view-->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 ">
+                            <div class="col-md-6 col-lg-4 ">
                                 <div class="item-veg-4">
                                     <div class="m_item-veg-4">
                                         <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
@@ -329,7 +336,36 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 ">
+                            <div class="col-md-6 col-lg-4 ">
+                                <div class="item-veg-4">
+                                    <div class="m_item-veg-4">
+                                        <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
+                                        <div class="m4_detail">
+                                            <h6 class="rs"> <a href="">
+                                                Xà lách mới về
+                                              </a> </h6>
+                                            <strike>100.000đ</strike>
+                                            <div>90.000đ </div>
+                                        </div>
+                                        <div class="discount-percent">
+                                            <span>
+                                                - 50%
+                                            </span>
+                                        </div>
+                                        <!---icon-view-->
+                                        <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
+                                            <a href="javascript:void(0);" class="icon-cart">
+                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                <span>
+                                                    Giỏ hàng
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!---icon-view-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 ">
                                 <div class="item-veg-4">
                                     <div class="m_item-veg-4">
                                         <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
@@ -353,7 +389,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 ">
+                            <div class="col-md-6 col-lg-4 ">
                                 <div class="item-veg-4">
                                     <div class="m_item-veg-4">
                                         <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
@@ -377,7 +413,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 ">
+                            <div class="col-md-6 col-lg-4 ">
                                 <div class="item-veg-4">
                                     <div class="m_item-veg-4">
                                         <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
@@ -406,7 +442,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 ">
+                            <div class="col-md-6 col-lg-4 ">
                                 <div class="item-veg-4">
                                     <div class="m_item-veg-4">
                                         <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
@@ -430,7 +466,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 ">
+                            <div class="col-md-6 col-lg-4 ">
                                 <div class="item-veg-4">
                                     <div class="m_item-veg-4">
                                         <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
@@ -454,7 +490,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 ">
+                            <div class="col-md-6 col-lg-4 ">
                                 <div class="item-veg-4">
                                     <div class="m_item-veg-4">
                                         <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
@@ -482,7 +518,7 @@
 
                         <!--pagination-->
                         <nav aria-label="" class=" lst-pagin d-md-block d-none">
-                            <ul class="pagination d-flex justify-content-end">
+                            <ul class="pagination d-flex justify-content-center align-items-center">
                                 <li class="page-item disabled">
                                     <a class="page-link" href="#" tabindex="-1">Previous</a>
                                 </li>
@@ -500,6 +536,59 @@
                             <a href="#" class="flex_center btn-xemthem-lst">Xem thêm</a>
                         </div>
                         <!--pagination-->
+
+
+                        <!-- hien thi dang list -->
+                        <div class="row veg-box-4 d-md-none d-block d-sm-block">
+                            <div class="col-12 item-veg-4">
+                                <div class="m_item-veg-4">
+                                    <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                                    <div class="m4_detail col-md-12 col-7">
+                                        <h6 class="rs">
+                                           <a href="">
+                                             Xà lách mới về
+                                           </a> 
+                                        </h6>
+                                        <strike>100.000đ</strike>
+                                        <div>90.000đ <span>300gram</span></div>
+                                        <a href="javascript:;" class="btn-mua" onclick="openFixedCart()"">Mua ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12  item-veg-4">
+                                <div class="m_item-veg-4">
+                                    <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                                    <div class="m4_detail col-md-12 col-7">
+                                        <h6 class="rs">Xà lách mới về</h6>
+                                        <strike>100.000đ</strike>
+                                        <div>90.000đ <span>300gram</span></div>
+                                        <a href="javascript:;" class="btn-mua" onclick="openFixedCart()"">Mua ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12  item-veg-4">
+                                <div class="m_item-veg-4">
+                                    <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                                    <div class="m4_detail col-md-12 col-7">
+                                        <h6 class="rs">Xà lách mới về</h6>
+                                        <strike>100.000đ</strike>
+                                        <div>90.000đ <span>300gram</span></div>
+                                        <a href="javascript:;" class="btn-mua" onclick="openFixedCart()"">Mua ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12  item-veg-4">
+                                <div class="m_item-veg-4">
+                                    <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
+                                    <div class="m4_detail col-md-12 col-7">
+                                        <h6 class="rs">Xà lách mới về</h6>
+                                        <strike>100.000đ</strike>
+                                        <div>90.000đ <span>300gram</span></div>
+                                        <a href="javascript:;" class="btn-mua" onclick="openFixedCart()"">Mua ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -609,7 +698,6 @@
 <script src="js/range-search.js"></script>
 
 
-<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
     var current_min = 0

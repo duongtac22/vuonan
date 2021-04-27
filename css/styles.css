@@ -20,10 +20,7 @@ input:-webkit-autofill:active
 {
  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
-.custom-container {
-    max-width: 975px;
-    margin: 0 auto;
-}
+
 .text-22 {
     font-size: 22px; 
 }
@@ -354,12 +351,12 @@ body .veg-main .veg-box-3 .m_item-veg-3:hover .veg-content-1-effect a {
 }
 body .veg-main h2.title {
     color: #333333;
-    font-size: 1.75rem;
+    font-size: 20px;
     font-weight: 600;
 }
 body .veg-main .top-m-block .title {
     position: relative ;
-    padding: 25px 0 ; 
+    padding: 14px 0 ; 
 }
 .top-m-block {
     padding: 50px 0 ; 
@@ -370,7 +367,7 @@ body .veg-main .top-m-block .title:after {
     position: absolute;
     bottom: 0 ;
     width: 100%;
-    max-width: 120px;
+    max-width: 90px;
 }
 body .veg-main .top-m-block span {
     font-size: 14px;
@@ -381,7 +378,7 @@ body .veg-main .top-m-block span {
 
 body .veg-main .item-veg-4 {
     /* box-shadow: 0 8px 3px 1px #efeded; */
-    margin: 15px 0;
+    margin: 9px 0;
     border: 1px solid #d6d6d6;
 }
 
@@ -632,9 +629,6 @@ body .inner-footer .main-footer .footer-addr p{
  margin: 15px 0 ; 
 }
 
-body .inner-footer .main-footer .list-inline-item {
-
-}
 body .inner-footer .main-footer a {
     margin: 6px 0;
     color: #959595;
@@ -816,11 +810,15 @@ footer {
     body .veg-main {
         margin-top: 0
     }
-
+    body .veg-main .item-veg-4 .m_item-veg-4 .discount-percent {
+        top: 20px;
+    right: auto;
+    left: 20px;
+    }
     body .veg-main .veg-box-4 .item-veg-4 .m_item-veg-4 {
         display: flex;
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
         /*padding: 15px 0*/
         margin: 0;
         margin: 0;
@@ -1916,6 +1914,30 @@ div#popup-cart.slide-in {
     max-width: 915px;
     margin: 0 auto;
 }
+#slider-range {
+    padding: 0 15px;
+    height: 1px;
+}
+.ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 1px;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background-image: none;
+    background-color : #C4C4C4; 
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -8px;
+    margin-left: -4px;
+    outline : none ; 
+}
+
 @media (max-width: 1650px) {
     body .veg-main .veg-box-3 .veg-content-1 h4 {
         font-size: 2rem;
@@ -2175,6 +2197,25 @@ div#popup-cart.slide-in {
     }
     .cart-popup-info .cart-popup-name{
         font-size: 14px;
+    }
+    body .veg-main .item-veg-4 .m_item-veg-4 .m4_detail {
+        border : none ; 
+    }
+    body .veg-main .veg-box-4 .item-veg-4 .m_item-veg-4 .img{
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+    body .veg-main .item-veg-4 .m_item-veg-4 .hover-item {
+        visibility: visible;
+        justify-content: flex-start;
+        align-items: flex-end;
+        bottom: 20px;
+        bottom: 20px;
+    top: auto;
+    left: auto;
+    }
+    body .veg-main .item-veg-4 .m_item-veg-4 .hover-item .icon-cart {
+        margin-left: 41.666667%;
     }
 }
 

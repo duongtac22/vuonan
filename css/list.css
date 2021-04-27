@@ -35,7 +35,6 @@
 }
 
 .main-lst .lst-left .box-left {
-    min-height: 200px;
     margin-bottom: 30px;
 }
 
@@ -45,16 +44,30 @@
     height: 50px;
     margin:0 5px; 
     border-bottom: 1px solid #d1d1d1;
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
 }
-
+.main-lst .lst-left .box-left .box-price-range {
+    padding: 15px 4px;
+    padding-top: 30px;
+}
+.main-lst .lst-left .box-left .box-price-range p {
+    margin: 15px 0 0 0 ; 
+    font-size: 14px;
+    color: #979797;
+}
+.main-lst .lst-left .box-left .box-price-range b {
+    color : #141414;
+    margin-left : 10px; 
+}
+.main-lst .lst-left .box-left ul.lst-product {
+    padding-top: 20px; 
+}
 .main-lst .lst-left .box-left ul.lst-product li {
-    height: 44px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin:0 5px; 
+    margin: 6px 5px;
 }
 .main-lst .lst-left .box-left ul.lst-product li span.count {
     background-color: #ff7e36;
@@ -72,7 +85,7 @@
 
 .main-lst .lst-left .box-left ul.lst-product li a {
     color: #828282;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -117,7 +130,21 @@
 .main-lst .top-right .left span {
     color: #828282
 }
-
+.main-lst .layout-options span.icons {
+    display : inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; 
+}
+.main-lst .layout-options span.icons svg {
+    position: relative;
+    top: -2px;
+    width: 20px;
+    height: 20px;
+}
+.main-lst .layout-options span.icons.active svg path {
+    fill : #72bc77 ;
+}
 .lst-weight .container-check {
     display: block;
     position: relative;
@@ -182,9 +209,11 @@
 .custom-select {
     position: relative;
     font-family: Arial;
-    width: 175px;
+    width: 100px;
     height: 38px;
-    margin-left: 15px
+    margin-left: 15px;
+    border: none;
+    cursor: pointer;
 }
 
 .custom-select select {
@@ -257,35 +286,46 @@
 }
 
 .lst-pagin ul li {
-    margin: 0 6px
+    margin: 0 2px
 }
-
+.lst-pagin ul li.page-item.active .page-link {
+    background-color: unset;
+    border-color: unset ;
+    color : #111111 ; 
+}
 .lst-pagin ul li a {
-    color: #6a6a6a;
-    border-radius: 5px
+    border-radius: 5px;
+    padding: 0;
+    font-size: 14px;
+    border: none !important;
+    color: #929292;
+    line-height: 20px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
 }
 
 .lst-pagin ul li:first-child a {
     text-indent: -999em;
-    width: 35px;
-    height: 33px;
-    background: url(../images/ar-2.png) no-repeat top 10px left 10px;
+    width: 20px;
+    height: 20px;
+    background: url(../images/ar-2.png) no-repeat top 5px left 5px;
     transform: rotate(-90deg)
 }
 
 .lst-pagin ul li:last-child a {
     text-indent: -999em;
-    width: 35px;
-    height: 33px;
-    background: url(../images/ar-2.png) no-repeat top 10px left 10px;
+    width: 20px;
+    height: 20px;
+    background: url(../images/ar-2.png) no-repeat top 5px left 5px;
     transform: rotate(90deg)
 }
 
-.lst-pagin ul li.active a, .lst-pagin ul li:hover a {
+/* .lst-pagin ul li.active a, .lst-pagin ul li:hover a {
     color: #fff;
     background-color: #639c12 !important;
     border-color: #639c12 !important
-}
+} */
 
 .btn-xemthem-lst {
     background: #29a41c;
@@ -321,10 +361,6 @@
 
     .top-right .left {
         margin-bottom: 10px
-    }
-
-    .top-right .w-50 {
-        width: 100% !important
     }
 
     .promotion {

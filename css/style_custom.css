@@ -326,7 +326,6 @@ body .menu-header .lst-menu a {
 }
 body .veg-main .veg-box-4 .item-veg-4{
     box-shadow: unset;
-    border: none; 
 }
 body .veg-main .veg-box-4 .item-veg-4:hover {
     /*box-shadow: 0 8px 3px 1px #e6e5e1;*/
