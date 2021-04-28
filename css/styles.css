@@ -617,6 +617,7 @@ body .inner-footer .main-footer .lst-location li a {
     font-size: 18px;
     color : #141414;
     font-weight: 600;
+    word-break: break-word;
 }
 body .inner-footer .main-footer h6 {
     color: #323232;
@@ -717,7 +718,8 @@ body .footer-bottom {
 
 footer {
     position: relative;
-    background: #f6f6f6;
+    /* background: #f6f6f6; */
+    border-top: 1px solid #E5E5E5;
 }
 
 

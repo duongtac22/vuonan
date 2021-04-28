@@ -4,16 +4,39 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>Error</title>
+    <title>Danh sách sản phẩm</title>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" >
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/range-search.css">
+    <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="css/search.css">
 </head>
 <body class="">
 <div class="wrapper">
+    <div class="header-top d-none d-md-block float-md-left w-100">
+        <div class="container custom-container">
+            <div class="float-right">
+                <a href="mailto:aaaa@gmail.com" class="evelope">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+
+                    <span>
+                        lienhe@miyagevn@gmail.com
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
     <!--header-mobile-->
     <header class="d-block d-sm-block d-md-none">
         <div class="d-flex align-items-center  header-mb">
@@ -24,11 +47,13 @@
                 </a>
             </div>
             <div class="box-right d-flex flex-row">
-                <div class="box-search flex_center">
-                    <a href="javascript:void(0);" class="icon-search" id="icon-search-mb"><img src="images/icon-search.png"/></a>
+                <div class="box-search mr-0 flex_center">
+                    <a href="javascript:void(0);" class="icon-search" id="icon-search-mb">
+                        <img src="images/icon-search.png" width="20" height="20"/>
+                    </a>
                 </div>
                 <div class="box-cart flex_center position-relative">
-                    <a href="#" class="icon-cart"><img src="images/icon-cart.png"/></a>
+                    <img src="images/icon-cart.png" alt="" class="img-fluid">
                     <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
                 </div>
             </div>
@@ -54,19 +79,17 @@
             </ul>
         </div>
     </nav>
-    <!--header-mobile-->
     <div class="box-search-mb">
-        <div class="box-input form-group">
-            <input type="text" placeholder="Nhập từ khóa tìm kiếm" class="w-100 form-control">
-        </div>
-        <h6>Lịch sử tìm kiếm</h6>
-        <ul class="rs">
-            <li class="list-inline"><a href="#">Rau củ quả</a></li>
-            <li><a href="#">Rau củ quả</a></li>
-            <li><a href="#">Rau củ quả</a></li>
-            <li><a href="#">Rau củ quả</a></li>
-        </ul>
+        <form method="GET" action="https://vuonan.vn/search" accept-charset="UTF-8" autocomplete="on">
+            <div class="box-input form-group">
+                <input type="text" name="search" placeholder="Nhập từ khóa tìm kiếm" class="w-100 form-control">
+            </div>
+            <div class="d-flex justify-content-center">
+                <input id="search_submit" value="Tìm kiếm" class="btn btn-primary" type="submit">
+            </div>
+        </form>
     </div>
+    <!--header-pc-->
     <header>
         <div class="container d-md-block d-sm-none d-none">
             <div class="row menu-header align-items-center">
@@ -84,28 +107,28 @@
                             <a class="dropdown-item" href="#">Sản phẩm khác</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link ">Khuyến mại</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link ">Liên hệ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link ">Blog</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link ">Tuyển dụng</a></li>
                 </ul>
                 <div class="right-menu flex_center">
                     <div class="box-search flex_center">
-                        <form action="" autocomplete="on" id="wrap">
+                        <form method="GET" action="" accept-charset="UTF-8" autocomplete="on" id="wrap" class="">
                             <a href="javascript:void(0);" class="click-form"></a>
-                            <select class="cat-search">
-                                <option>DANH MỤC</option>
-                                <option>Rau cải</option>
-                                <option>Rau cải</option>
-                                <option>Rau cải</option>
-                            </select>
-                            <input id="search" name="search" type="text" placeholder="Nhập từ khóa tìm kiếm"><input id="search_submit" value="Rechercher" type="submit">
+                            <input id="search" name="search" type="text" placeholder="Tìm kiếm">
+                            <input id="search_submit" value="Rechercher" type="submit">
                         </form>
-                        <a href="javascript:void(0);" class="icon-search d-block d-md-none"><img src="images/icon-search.png"/></a>
+
+                        <a href="javascript:void(0);" class="icon-search d-block d-md-none">
+                            <img src="images/icon-search.png">
+                        </a>
                     </div>
                     <div class="box-cart flex_center position-relative">
-                        <a href="#" class="icon-cart"><img src="images/icon-cart.png"/></a>
+                        <a href="#" class="icon-cart">
+                            <img src="images/icon-cart.png" alt="" class="img-fluid">
+                        </a>
                         <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
                     </div>
-                    <div class="box-login-res flex_center">
+                    <!-- <div class="box-login-res flex_center">
                         <div class="d-flex align-items-center icon-user"><img src="images/icon-user.png"/></div>
                         <div class="d-flex flex-column">
                             <div class="_login">
@@ -113,32 +136,33 @@
                             </div>
                             <span class="name-des">Tài khoản</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </header>
     <main>
         <section class="banner-slide d-md-block d-sm-none d-none banner-list">
-            <!--<a href="#"><img src="../images/list/banner-list.jpg" class="w-100"/></a>-->
-            <div class="main-nav d-flex flex-column flex_center">
-                <h4 class="d-flex">Tìm kiếm</h4>
-                <div class="d-flex"><a href="#">Trang chủ</a>/<a href="#">Tìm kiếm</a></div>
-            </div>
+                <a href="#"><img src="../images/list/banner-list.png" class="w-100"/></a>
+                <div class="main-nav d-flex flex-column flex_center">
+                    <h4 class="d-flex">Tìm kiếm</h4>
+                    <div class="d-flex"><a href="#">Trang chủ</a>/<a href="#">Tìm kiếm</a></div>
+                </div>
         </section>
         <!--banner-mobile-->
         <section class="banner-slide d-block d-sm-block d-md-none">
-            <a href="#"><img src="images/list/banner-list-mb.jpg" class="w-100"/></a>
+            <a href="#"><img src="../images/list/banner-list.png" class="w-100"/></a>
             <div class="main-nav d-flex flex-column flex_center">
-                <h4 class="d-flex">Tìm kiếm</h4>
-                <div class="d-flex"><a href="#">Trang chủ</a>/<a href="#">Tìm kiếm</a></div>
+                    <h4 class="d-flex">Tìm kiếm</h4>
+                    <div class="d-flex"><a href="#">Trang chủ</a>/<a href="#">Tìm kiếm</a></div>
             </div>
         </section>
+
         <div class="w-100 veg-main veg-list">
             <div class="container">
                 <div class="main-lst">
                     <div class="flex_center main-error">
-                        <img src="images/search-error.png"/>
+                        <img src="images/search-error.png">
                         <div class="w-100">Rất tiếc! Chúng tôi không thể tìm kiếm kết quả cho từ khóa <span>"Do dung cho baby"</span></div>
                         <p>Hãy chắc chắn rằng anh/chị đang tìm kiếm đúng sản phẩm và viết có dấu</p>
                     </div>
@@ -146,108 +170,130 @@
             </div>
         </div>
     </main>
-
+</div>
     <footer>
-        <div class="container">
-            <div class="row inner-footer">
-                <div class="w-100 box-mail position-relative">
-                    <img src="images/bg-mail.png" class="w-100 d-md-block d-none d-sm-none"/>
-                    <img src="images/bg-mail-mb.jpg" class="w-100 d-block d-sm-block d-md-none"/>
-                    <div class="inner-mail position-absolute w-100 h-100 d-flex justify-content-end">
-                        <div class="w-50 d-flex justify-content-end align-items-center">
-                            <input type="text" placeholder="Nhập địa chỉ email..">
-                            <button>Đăng ký</button>
+        <div class="inner-footer">
+                <div class="container">
+                
+                <div><img src="images/logo-footer.png"/></div>
+                <div class="w-100 main-footer row">
+                    <div class="col-md-12 col-lg-4 d-flex flex-column my-3 my-lg-0">
+                        <div class="footer-addr">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni saepe rem cupiditate molestiae voluptas assumenda veniam quisquam, quaerat reprehenderit cum, autem ex fugit quasi voluptate sint explicabo vel quidem! Quod.
+                            </p>
                         </div>
-                    </div>
-                </div>
-                <div class="w-100 main-footer">
-                    <div class="col-md-3 d-flex flex-column">
-                        <div><img src="images/logo-footer.png"/></div>
                         <ul class="rs lst-location list-group">
-                            <li class="list-inline-item i-location d-flex  align-items-center"><img src="images/icon-location.png"/>85 Vũ Trọng Phụng, Q. Thanh Xuân, tp Hà Nội</li>
-                            <li class="list-inline-item i-phone d-flex  align-items-center"><img src="images/icon-telephone.png"/>0917 616 633</li>
-                            <li class="list-inline-item i-mail d-flex  align-items-center"><img src="images/icon-email.png"/><a href="#">vcccorp@gmail.com</a></li>
+                            <li class="list-inline-item i-location d-flex  align-items-center">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>
+                                    Shophouse D19 Dreamland
+                                    Xuân La - 107 Xuân La - Tây Hồ - Hanoi
+                                </span>
+                                
+                            </li>
+                            <li class="list-inline-item i-phone d-flex  align-items-center">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                <a href="mailto:lienhe@miyagevn@gmail.com">
+                                    lienhe@miyagevn@gmail.com
+                                </a>
+                            </li>
+                            <li class="list-inline-item i-mail d-flex  align-items-center">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+    
+                                <div class="list-phone">
+                                    <a href="tel:0387783870">
+                                        038 7783870 
+                                    </a>
+                                    -
+                                    <a href="tel:0583872235">
+                                        058 3872235 
+                                    </a>
+                                    <br>
+                                    <a href="tel:0866087322">
+                                        086 6087322 
+                                    </a>
+                                    -
+                                    <a href="tel:0942846886">
+                                        094 2846886 
+                                    </a>
+                                </div>
+                            </li>
                         </ul>
                     </div>
-                    <div class="col-md-3 d-flex flex-column">
-                        <h6>CHÍNH SÁCH</h6>
-                        <a href="#">Chính sách thanh toán</a>
-                        <a href="#">Chính sách đổi trả sản phẩm</a>
+                    <div class="order-lg-1 col-md-12  col-lg-4 d-flex flex-column my-3 my-lg-0">
+                        <h6>Liên hệ </h6>
+                        <p class="newsletter">
+                            Hãy để lại Email của bạn <br> để nhận thông tin mới nhất từ cửa hàng
+                        </p>
+                        <form action="" class="newsletter-form">
+                            <input type="text" placeholder="Nhập địa chỉ Email của bạn">
+                            <button type="submit">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </button>
+                        </form>
                     </div>
-                    <div class="col-md-3 d-flex flex-column">
-                        <h6>HỖ TRỢ</h6>
-                        <a href="#">Chát hỗ trợ</a>
-                        <a href="#">Hướng dẫn mua hàng</a>
-                        <a href="#"><img src="images/logo-1.png"/></a>
+                    <div class="col-md-6  col-lg-2 d-flex flex-column my-3 my-lg-0">
+                        <h6>Dịch vụ</h6>
+                        <a href="#">Trang chủ</a>
+                        <a href="#">Sản phẩm</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Tuiyển dụng</a>
+                        <a href="#">Liên hệ</a>
                     </div>
-                    <div class="col-md-3 d-flex flex-column">
-                        <div class="row">
-                            <img src="images/img-fb.jpg" class="img-fluid"/>
-                        </div>
+                    <div class="col-md-6  col-lg-2 d-flex flex-column my-3 my-lg-0">
+                        <h6>Dịch vụ</h6>
+                        <a href="#">Hoa quả</a>
+                        <a href="#">Quà tặng</a>
+                        <a href="#">Thực phẩm</a>
+                        <a href="#">Bánh kẹo</a>
                     </div>
+                      
                 </div>
-                <div class="w-100 footer-bottom">
-                    <div class="w-75">Copyright &copy; 2018  Công ty TNHH Freshpoint. All Rights Reserved.</div>
-                    <div class="w-25 text-right">
-                        Designed by <img src="images/icon-logo-2.png"/>
-                    </div>
+        </div>
+        </div>
+    
+        <div class="w-100 footer-bottom">
+            <div class="container">
+                <div class="text-center">
+                   Copyright @ 2021 Omiyagevn - All Rights Reserved .
                 </div>
             </div>
+            
         </div>
     </footer>
-    <a id="back-to-top" href="#" class="back-to-top"></a>
-    <div class="full"></div>
-    <div class="full-search"></div>
-    <div class="popup-product">
-        <a href="javascript:void(0);" class="position-absolute btn-close-p"><img src="images/btn-close-pop.png"/></a>
-        <div class="box-images">
-            <a href="javascript:void(0);" class="view-img flex_center view-thumb-large">
-                <img id="zoom_01"   src="images/pop-suplo-1.png" data-zoom-image="images/img-banner-mb.jpg" />
-            </a>
-            <div class="lst-img" id="navigation">
-                <a class="link-img" href="#" data-src="images/pop-suplo-1.png"><img src="images/pop-suplo-1.png"/></a>
-                <a class="link-img" href="#" data-src="images/img-left-bapcai-2.png"><img src="images/img-left-bapcai-2.png"/></a>
-                <a class="link-img" href="#" data-src="images/pop-suplo-1.png"><img src="images/pop-suplo-1.png"/></a>
-            </div>
-        </div>
-        <div class="box-detail">
-            <h4>Rau hoa cải xanh</h4>
-            <div>Tình trạng: <b>Còn hàng</b></div>
-            <div class="box-price d-flex">
-                <div class="new-price">90.000đ</div><div class="old-price"><strike>130.000d</strike></div>
-            </div>
-            <div class="d-flex flex-row">
-                <div class="weight">
-                    <label>Khối lượng (gram/kg)</label>
-                    <select>
-                        <option>300 gram</option>
-                        <option>300 gram</option>
-                        <option>300 gram</option>
-                        <option>300 gram</option>
-                    </select>
-                </div>
-                <div class="number">
-                    <label>Số lượng</label>
-                    <input type="text" placeholder="01">
-                    <a href="javascript:void(0);" class="btn-up"></a>
-                    <a href="javascript:void(0);" class="btn-down"></a>
-                </div>
-            </div>
-            <div class="d-flex box-control">
-                <a href="#">Mua ngay</a>
-                <a href="#">Thêm vào giỏ</a>
-            </div>
-            <div class="des-pp">
-                <i>Mô tả: </i><br>
-                <p>Hoa cải xanh là loại rau rất giàu chất dinh dưỡng, với hàm lượng vitamin cao và có thể phối hợp đa dạng các món ăn từ xào cho tới nấu canh đều rất hấp dẫn.</p>
-            </div>
-        </div>
-    </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js?ver=122"></script>
+<script type="text/javascript" src="js/popper.min.js?ver=122"></script>
+<script type="text/javascript" src="js/bootstrap.min.js?ver=122"></script>
 <script src="js/slick.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js" type="text/javascript"></script>
 <script src="js/script.js"></script>
+<script src="js/custom-select.js"></script>
+<script src="js/range-search.js"></script>
+
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    var current_min = 0
+    var current_max = 15500000;
+
+    $(document).ready(function(){
+        
+        var options = {
+            range: true,
+            min: 0,
+            max: 5000000,
+            values: [current_min, current_max],
+            step: 5,
+            slide: function(event, ui) {
+                $( "#amount" ).html(formatCurrency(ui.values[ 0 ]) + " VND - " + formatCurrency(ui.values[ 1 ] ) + " VND");
+            },
+        }, min, max;
+
+        $("#slider-range").slider(options);
+        $("#amount").html( formatCurrency(current_min) + "VND - " + formatCurrency(current_max) + " VND");
+    })
+</script>
 </html>
