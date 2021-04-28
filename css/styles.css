@@ -12,7 +12,7 @@
     }
 }
 
-
+body .mz-expand a[style*='color: inherit'],.mz-hover-zoom a[style*='color: inherit']{display:none!important;position:absolute;top:-1.0E+16px}
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
@@ -1360,10 +1360,6 @@ padding: 0
 } */
 .main-inner img {
     max-width: 100%!important;
-}
-.des-pp {
-    height: 170px;
-    overflow: hidden;
 }
 
 section#slide-banner {

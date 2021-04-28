@@ -21,14 +21,24 @@
     color: #fff
 }
 
-.banner-slide .main-nav h4 {
-    font-size: 24px;
-    font-weight: 700
+.banner-slide .main-nav h1.d-flex {
+    margin: 0 ; 
+    font-size: 50px;
+    font-weight: 700;
+    padding: 20px 28px;
+    border: 2px solid #ffffff ; 
 }
-
+.banner-slide .main-nav h1.nav-title {
+    font-size: 16px;
+    margin: 0 10px; 
+    line-height: 20px;
+    font-weight: normal;
+}
 .banner-slide .main-nav a {
     color: #fff;
-    margin: 0 10px
+    margin: 0 10px;
+    line-height: 20px;
+    font-size: 16px;
 }
 
 .weight {
@@ -762,6 +772,9 @@
 }
 
 @media screen and (max-width:767px) {
+    .banner-slide .main-nav h1.d-flex {
+        font-size: 24px;
+    }
     .price-all {
         width: 100%;
         margin: 20px 15px
