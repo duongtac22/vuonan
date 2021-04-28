@@ -38,7 +38,7 @@
         </div>
     </div>
     <!--header-mobile-->
-    <header class="d-block d-md-block d-lg-none">
+    <header class="d-block d-sm-block d-md-none">
         <div class="d-flex align-items-center  header-mb">
             <div class=""><a href="#menu" class="toggle-menu d-flex align-items-center" aria-role="button"><img src="images/icon-menu-mb.png" data-zoom="https://demos.imgix.net/wristwatch.jpg?w=1000&ch=DPR&dpr=2"/></a></div>
             <div class="flex_1 _logo flex_center">
@@ -91,7 +91,7 @@
     </div>
     <!--header-pc-->
     <header>
-        <div class="container d-lg-block d-md-none d-none">
+        <div class="container d-md-block d-sm-none d-none">
             <div class="row menu-header align-items-center">
                 <div class="logo">
                     <a href="#"><img src="images/logo.png"/></a>
@@ -143,97 +143,104 @@
     </header>
     <main>
         <section class="banner-slide d-md-block d-sm-none d-none banner-list">
-            <!--<a href="#"><img src="../images/list/banner-list.jpg" class="w-100"/></a>-->
+                <a href="#"><img src="../images/list/banner-list.png" class="w-100"/></a>
                 <div class="main-nav d-flex flex-column flex_center">
-                    <h4 class="d-flex">Rau sạch</h4>
-                    <div class="d-flex"><a href="#">Trang chủ</a>/<a href="#">Rau sạch</a></div>
+                    <h1 class="d-flex">Rau sạch</h1>
+                    <!-- <div class="d-flex"><a href="#">Trang chủ</a>/<a href="#">Rau sạch</a></div> -->
                 </div>
         </section>
         <!--banner-mobile-->
         <section class="banner-slide d-block d-sm-block d-md-none">
-            <a href="#"><img src="images/list/banner-list-mb.jpg" class="w-100"/></a>
+            <a href="#"><img src="../images/list/banner-list.png" class="w-100"/></a>
             <div class="main-nav d-flex flex-column flex_center">
-                <h4 class="d-flex">Rau sạch</h4>
-                <div class="d-flex"><a href="#">Trang chủ</a>/<a href="#">Rau sạch</a></div>
+                <h1 class="d-flex">Rau sạch</h1>
             </div>
         </section>
+
         <div class="w-100 veg-main veg-list">
             <div class="container">
                 <div class="row main-lst">
-                    <div class="col-lg-4 d-none d-lg-block">
-                        <div class="lst-left">
-                            <div class="box-left w-100">
-                                <div class="title d-flex align-items-center">DANH SÁCH SẢN PHẨM</div>
-                                <ul class="rs lst-product list-group">
-                                    <li class="list-inline-item ">
-                                        <a href="#">Rau sạch</a>
-                                        <span class="count">
-                                            33
-                                        </span>
-                                    </li>
-                                    <li class="list-inline-item ">
-                                        <a href="#">Củ sạch</a>
-                                        <span class="count">
-                                            33
-                                        </span>
-                                    </li>
-                                    <li class="list-inline-item ">
-                                        <a href="#">Quả ngọt</a>
-                                        <span class="count">
-                                            70
-                                        </span>
-                                    </li>
-                                    <li class="list-inline-item ">
-                                        <a href="#">Sản phẩm đặc biệt</a>
-                                        <span class="count">
-                                            313
-                                        </span>
-                                    </li>
-                                    <li class="list-inline-item ">
-                                        <a href="#">Các loại rau củ quả khác</a>
-                                        <span class="count">
-                                            13
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="box-left w-100">
-                                <div class="title d-flex align-items-center">Giá</div>
-                                <div class="box-price-range">
-                                    <div id="slider-range"></div>
-                                   
-                                    <p >
-                                        Khoảng giá : 
-                                        <b id="amount">   0 VND - 5.000.000 VND </b>
-                                    </p>
+                    <div class="col-lg-4 ">
+                        <div class="product-sidebar">
+                            <a href="javascript:;" class="toggle-filter d-flex justify-content-between align-items-center d-lg-none">
+                                Bộ lọc 
+                                <i aria-hidden="true" class="fa fa-angle-down"></i>
+                            </a>
+                            <div class="lst-left js-check-collapsed">
+                                <div class="box-left w-100">
+                                    <div class="title d-flex align-items-center">DANH SÁCH SẢN PHẨM</div>
+                                    <ul class="rs lst-product list-group">
+                                        <li class="list-inline-item ">
+                                            <a href="#">Rau sạch</a>
+                                            <span class="count">
+                                                33
+                                            </span>
+                                        </li>
+                                        <li class="list-inline-item ">
+                                            <a href="#">Củ sạch</a>
+                                            <span class="count">
+                                                33
+                                            </span>
+                                        </li>
+                                        <li class="list-inline-item ">
+                                            <a href="#">Quả ngọt</a>
+                                            <span class="count">
+                                                70
+                                            </span>
+                                        </li>
+                                        <li class="list-inline-item ">
+                                            <a href="#">Sản phẩm đặc biệt</a>
+                                            <span class="count">
+                                                313
+                                            </span>
+                                        </li>
+                                        <li class="list-inline-item ">
+                                            <a href="#">Các loại rau củ quả khác</a>
+                                            <span class="count">
+                                                13
+                                            </span>
+                                        </li>
+                                    </ul>
                                 </div>
-                               
-                            </div>
-                            <div class="box-left w-100">
-                                <div class="title d-flex align-items-center">Thương hiệu</div>
-                                <ul class="rs lst-product list-group">
-                                    <li class="list-inline-item ">
-                                        <a href="#">Rau sạch</a>
-                                    </li>
-                                    <li class="list-inline-item ">
-                                        <a href="#">Củ sạch</a>
-                                    </li>
-                                    <li class="list-inline-item ">
-                                        <a href="#">Quả ngọt</a>
-                                    </li>
-                                    <li class="list-inline-item ">
-                                        <a href="#">Sản phẩm đặc biệt</a>
-                                    </li>
-                                    <li class="list-inline-item ">
-                                        <a href="#">Các loại rau củ quả khác</a>
-                                    </li>
-                                </ul>
+                                <div class="box-left w-100">
+                                    <div class="title d-flex align-items-center">Giá</div>
+                                    <div class="box-price-range">
+                                        <div id="slider-range"></div>
+                                       
+                                        <p >
+                                            Khoảng giá : 
+                                            <b id="amount">   0 VND - 5.000.000 VND </b>
+                                        </p>
+                                    </div>
+                                   
+                                </div>
+                                <div class="box-left w-100">
+                                    <div class="title d-flex align-items-center">Thương hiệu</div>
+                                    <ul class="rs lst-product list-group">
+                                        <li class="list-inline-item ">
+                                            <a href="#">Rau sạch</a>
+                                        </li>
+                                        <li class="list-inline-item ">
+                                            <a href="#">Củ sạch</a>
+                                        </li>
+                                        <li class="list-inline-item ">
+                                            <a href="#">Quả ngọt</a>
+                                        </li>
+                                        <li class="list-inline-item ">
+                                            <a href="#">Sản phẩm đặc biệt</a>
+                                        </li>
+                                        <li class="list-inline-item ">
+                                            <a href="#">Các loại rau củ quả khác</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
+                       
                     </div>
                     <div class="col-lg-8 col-12">
                         <div class="top-right d-flex">
-                            <div class="w-50 d-flex align-items-end justify-content-end">
+                            <div class="w-50 d-flex align-items-end justify-content-lg-end justify-content-start">
                                 <div class="custom-select">
                                     <select>
                                         <option value="0">Sắn xếp</option>
@@ -263,76 +270,27 @@
                                 <div class="item-veg-4">
                                     <div class="m_item-veg-4">
                                         <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
+                                    
                                         <div class="m4_detail">
                                             <h6 class="rs"> <a href="">
                                                 Xà lách mới về
                                               </a> </h6>
                                             <strike>100.000đ</strike>
                                             <div>90.000đ </div>
-                                        </div>
-                                        <!---icon-view-->
-                                        <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                            <a href="javascript:void(0);" class="icon-cart">
+                                             <!---icon-view-->
+                                            <a href="javascript:void(0);" data-id="" class="btn-mua icon-cart">
                                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                 <span>
                                                     Giỏ hàng
                                                 </span>
                                             </a>
-                                        </div>
-                                        <!---icon-view-->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 ">
-                                <div class="item-veg-4">
-                                    <div class="m_item-veg-4">
-                                        <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
-                                        <div class="m4_detail">
-                                            <h6 class="rs"> <a href="">
-                                                Xà lách mới về
-                                              </a> </h6>
-                                            <strike>100.000đ</strike>
-                                            <div>90.000đ </div>
-                                        </div>
-                                        <!---icon-view-->
-                                        <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                            <a href="javascript:void(0);" class="icon-cart">
-                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                <span>
-                                                    Giỏ hàng
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!---icon-view-->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 ">
-                                <div class="item-veg-4">
-                                    <div class="m_item-veg-4">
-                                        <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
-                                        <div class="m4_detail">
-                                            <h6 class="rs"> <a href="">
-                                                Xà lách mới về
-                                              </a> </h6>
-                                            <strike>100.000đ</strike>
-                                            <div>90.000đ </div>
+                                            <!---icon-view-->
                                         </div>
                                         <div class="discount-percent">
                                             <span>
                                                 - 50%
                                             </span>
                                         </div>
-                                        <!---icon-view-->
-                                        <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                            <a href="javascript:void(0);" class="icon-cart">
-                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                <span>
-                                                    Giỏ hàng
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!---icon-view-->
                                     </div>
                                 </div>
                             </div>
@@ -340,28 +298,27 @@
                                 <div class="item-veg-4">
                                     <div class="m_item-veg-4">
                                         <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
+                                    
                                         <div class="m4_detail">
                                             <h6 class="rs"> <a href="">
                                                 Xà lách mới về
                                               </a> </h6>
                                             <strike>100.000đ</strike>
                                             <div>90.000đ </div>
+                                             <!---icon-view-->
+                                            <a href="javascript:void(0);" data-id="" class="btn-mua icon-cart">
+                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                <span>
+                                                    Giỏ hàng
+                                                </span>
+                                            </a>
+                                            <!---icon-view-->
                                         </div>
                                         <div class="discount-percent">
                                             <span>
                                                 - 50%
                                             </span>
                                         </div>
-                                        <!---icon-view-->
-                                        <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                            <a href="javascript:void(0);" class="icon-cart">
-                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                <span>
-                                                    Giỏ hàng
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!---icon-view-->
                                     </div>
                                 </div>
                             </div>
@@ -369,156 +326,37 @@
                                 <div class="item-veg-4">
                                     <div class="m_item-veg-4">
                                         <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
+                                    
                                         <div class="m4_detail">
                                             <h6 class="rs"> <a href="">
                                                 Xà lách mới về
                                               </a> </h6>
                                             <strike>100.000đ</strike>
                                             <div>90.000đ </div>
-                                        </div>
-                                        <!---icon-view-->
-                                        <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                            <a href="javascript:void(0);" class="icon-cart">
+                                             <!---icon-view-->
+                                            <a href="javascript:void(0);" data-id="" class="btn-mua icon-cart">
                                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                 <span>
                                                     Giỏ hàng
                                                 </span>
                                             </a>
-                                        </div>
-                                        <!---icon-view-->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 ">
-                                <div class="item-veg-4">
-                                    <div class="m_item-veg-4">
-                                        <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
-                                        <div class="m4_detail">
-                                            <h6 class="rs"> <a href="">
-                                                Xà lách mới về
-                                              </a> </h6>
-                                            <strike>100.000đ</strike>
-                                            <div>90.000đ </div>
-                                        </div>
-                                        <!---icon-view-->
-                                        <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                            <a href="javascript:void(0);" class="icon-cart">
-                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                <span>
-                                                    Giỏ hàng
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!---icon-view-->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 ">
-                                <div class="item-veg-4">
-                                    <div class="m_item-veg-4">
-                                        <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
-                                        <div class="m4_detail">
-                                            <h6 class="rs"> <a href="">
-                                                Xà lách mới về
-                                              </a> </h6>
-                                            <strike>100.000đ</strike>
-                                            <div>90.000đ </div>
+                                            <!---icon-view-->
                                         </div>
                                         <div class="discount-percent">
                                             <span>
-                                                - 20%
+                                                - 50%
                                             </span>
                                         </div>
-                                        <!---icon-view-->
-                                        <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                            <a href="javascript:void(0);" class="icon-cart">
-                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                <span>
-                                                    Giỏ hàng
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!---icon-view-->
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-4 ">
-                                <div class="item-veg-4">
-                                    <div class="m_item-veg-4">
-                                        <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
-                                        <div class="m4_detail">
-                                            <h6 class="rs"> <a href="">
-                                                Xà lách mới về
-                                              </a> </h6>
-                                            <strike>100.000đ</strike>
-                                            <div>90.000đ </div>
-                                        </div>
-                                        <!---icon-view-->
-                                        <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                            <a href="javascript:void(0);" class="icon-cart">
-                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                <span>
-                                                    Giỏ hàng
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!---icon-view-->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 ">
-                                <div class="item-veg-4">
-                                    <div class="m_item-veg-4">
-                                        <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
-                                        <div class="m4_detail">
-                                            <h6 class="rs"> <a href="">
-                                                Xà lách mới về
-                                              </a> </h6>
-                                            <strike>100.000đ</strike>
-                                            <div>90.000đ </div>
-                                        </div>
-                                        <!---icon-view-->
-                                        <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                            <a href="javascript:void(0);" class="icon-cart">
-                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                <span>
-                                                    Giỏ hàng
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!---icon-view-->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 ">
-                                <div class="item-veg-4">
-                                    <div class="m_item-veg-4">
-                                        <a href="#" class="img"><img src="images/img-prod1.jpg" class="w-100"/></a>
-                                        <div class="m4_detail">
-                                            <h6 class="rs"> <a href="">
-                                                Xà lách mới về
-                                              </a> </h6>
-                                            <strike>100.000đ</strike>
-                                            <div>90.000đ </div>
-                                        </div>
-                                        <!---icon-view-->
-                                        <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                            <a href="javascript:void(0);" class="icon-cart">
-                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                <span>
-                                                    Giỏ hàng
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!---icon-view-->
-                                    </div>
-                                </div>
-                            </div>
+                            
+                         
                         </div>
 
                         <!--pagination-->
                         <nav aria-label="" class=" lst-pagin d-md-block d-none">
-                            <ul class="pagination d-flex justify-content-center align-items-center">
+                            <ul class="pagination d-flex justify-content-center align-items-center mt-lg-4 mt-3">
                                 <li class="page-item disabled">
                                     <a class="page-link" href="#" tabindex="-1">Previous</a>
                                 </li>
@@ -540,8 +378,9 @@
 
                         <!-- hien thi dang list -->
                         <div class="row veg-box-4 d-md-none d-block d-sm-block">
-                            <div class="col-12 item-veg-4">
-                                <div class="m_item-veg-4">
+                            <div class="col-12 ">
+                                <div class="item-veg-4">
+                                     <div class="m_item-veg-4">
                                     <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
                                     <div class="m4_detail col-md-12 col-7">
                                         <h6 class="rs">
@@ -554,39 +393,44 @@
                                         <a href="javascript:;" class="btn-mua" onclick="openFixedCart()"">Mua ngay</a>
                                     </div>
                                 </div>
+                                </div>
+                               
                             </div>
-                            <div class="col-12  item-veg-4">
-                                <div class="m_item-veg-4">
+                            <div class="col-12 ">
+                                <div class="item-veg-4">
+                                     <div class="m_item-veg-4">
                                     <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
                                     <div class="m4_detail col-md-12 col-7">
-                                        <h6 class="rs">Xà lách mới về</h6>
+                                        <h6 class="rs">
+                                           <a href="">
+                                             Xà lách mới về
+                                           </a> 
+                                        </h6>
                                         <strike>100.000đ</strike>
                                         <div>90.000đ <span>300gram</span></div>
                                         <a href="javascript:;" class="btn-mua" onclick="openFixedCart()"">Mua ngay</a>
                                     </div>
                                 </div>
+                                </div>
+                               
                             </div>
-                            <div class="col-12  item-veg-4">
-                                <div class="m_item-veg-4">
+                            <div class="col-12 ">
+                                <div class="item-veg-4">
+                                     <div class="m_item-veg-4">
                                     <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
                                     <div class="m4_detail col-md-12 col-7">
-                                        <h6 class="rs">Xà lách mới về</h6>
+                                        <h6 class="rs">
+                                           <a href="">
+                                             Xà lách mới về
+                                           </a> 
+                                        </h6>
                                         <strike>100.000đ</strike>
                                         <div>90.000đ <span>300gram</span></div>
                                         <a href="javascript:;" class="btn-mua" onclick="openFixedCart()"">Mua ngay</a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-12  item-veg-4">
-                                <div class="m_item-veg-4">
-                                    <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
-                                    <div class="m4_detail col-md-12 col-7">
-                                        <h6 class="rs">Xà lách mới về</h6>
-                                        <strike>100.000đ</strike>
-                                        <div>90.000đ <span>300gram</span></div>
-                                        <a href="javascript:;" class="btn-mua" onclick="openFixedCart()"">Mua ngay</a>
-                                    </div>
                                 </div>
+                               
                             </div>
                         </div>
                     </div>

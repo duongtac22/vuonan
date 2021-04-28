@@ -2,10 +2,10 @@
     margin-top: 0 !important
 }
 
-.banner-list {
+/* .banner-list {
     background: url(../images/list/banner-list.jpg) 50% 0 no-repeat;
-    height: 122px
-}
+    height: 282px;
+} */
 
 .banner-slide {
     position: relative
@@ -20,15 +20,18 @@
     color: #fff
 }
 
-.banner-slide .main-nav h4 {
-    font-size: 24px;
-    font-weight: 700
+/* .banner-slide .main-nav h1 {
+    margin: 0 ; 
+    font-size: 50px;
+    font-weight: 700;
+    padding: 20px 28px;
+    border: 2px solid #ffffff ; 
 }
 
 .banner-slide .main-nav a {
     color: #fff;
     margin: 0 10px
-}
+} */
 
 .top-search {
     color: #212121;

@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Danh sách chi tiết sản phẩm</title>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" >
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css"/>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
@@ -15,6 +21,19 @@
 </head>
 <body class="">
 <div class="wrapper">
+    <div class="header-top d-none d-md-block float-md-left w-100">
+        <div class="container custom-container">
+            <div class="float-right">
+                <a href="mailto:aaaa@gmail.com" class="evelope">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+
+                    <span>
+                        lienhe@miyagevn@gmail.com
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
     <!--header-mobile-->
     <header class="d-block d-sm-block d-md-none">
         <div class="d-flex align-items-center  header-mb">
@@ -25,11 +44,13 @@
                 </a>
             </div>
             <div class="box-right d-flex flex-row">
-                <div class="box-search flex_center">
-                    <a href="javascript:void(0);" class="icon-search"><img src="images/icon-search.png"/></a>
+                <div class="box-search mr-0 flex_center">
+                    <a href="javascript:void(0);" class="icon-search" id="icon-search-mb">
+                        <img src="images/icon-search.png" width="20" height="20"/>
+                    </a>
                 </div>
                 <div class="box-cart flex_center position-relative">
-                    <a href="#" class="icon-cart"><img src="images/icon-cart.png"/></a>
+                    <img src="images/icon-cart.png" alt="" class="img-fluid">
                     <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
                 </div>
             </div>
@@ -39,36 +60,72 @@
     <nav id="menu">
         <div class="wrap-mb w-100 h-100">
             <a href="#" class="toggle-menu" aria-role="button"><img src="images/menu_close.png"/></a>
-            <ul>
+            <ul class="menu-mobile">
                 <li><a href="#" class="lnk-menu">TRANG CHỦ</a></li>
-                <li><a href="#" class="lnk-menu">SẢN PHẨM</a></li>
+                <li class="">
+                    <a href="javascript:void(0);" class="lnk-menu" onclick="menuMobile()">SẢN PHẨM</a>
+                    <div class="sub-menu" id="submenu">
+                        <a class="dropdown-item" href="#">Rau sạch</a>
+                        <a class="dropdown-item" href="#">Củ sạch</a>
+                        <a class="dropdown-item" href="#">Quả ngọt</a>
+                        <a class="dropdown-item" href="#">Sản phẩm khác</a>
+                    </div>
+                </li>
                 <li><a href="#" class="lnk-menu">KHUYẾN MẠI</a></li>
                 <li><a href="#" class="lnk-menu">LIÊN HỆ</a></li>
             </ul>
         </div>
     </nav>
-    <!--header-mobile-->
+    <div class="box-search-mb">
+        <form method="GET" action="https://vuonan.vn/search" accept-charset="UTF-8" autocomplete="on">
+            <div class="box-input form-group">
+                <input type="text" name="search" placeholder="Nhập từ khóa tìm kiếm" class="w-100 form-control">
+            </div>
+            <div class="d-flex justify-content-center">
+                <input id="search_submit" value="Tìm kiếm" class="btn btn-primary" type="submit">
+            </div>
+        </form>
+    </div>
+    <!--header-pc-->
     <header>
         <div class="container d-md-block d-sm-none d-none">
             <div class="row menu-header align-items-center">
                 <div class="logo">
                     <a href="#"><img src="images/logo.png"/></a>
                 </div>
-                <div class="flex_1 flex_center lst-menu">
-                    <a href="#" class="active">Trang chủ</a>
-                    <a href="#">Sản phẩm</a>
-                    <a href="#">Khuyến mại</a>
-                    <a href="#">Liên hệ</a>
-                </div>
+                <ul class="flex_1 flex_center lst-menu nav nav-pills">
+                    <li class="nav-item active"><a href="#" class="nav-link active">Trang chủ</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Rau sạch</a>
+                            <a class="dropdown-item" href="#">Củ sạch</a>
+                            <a class="dropdown-item" href="#">Quả ngọt</a>
+                            <a class="dropdown-item" href="#">Sản phẩm khác</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link ">Blog</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link ">Tuyển dụng</a></li>
+                </ul>
                 <div class="right-menu flex_center">
                     <div class="box-search flex_center">
-                        <a href="javascript:void(0);" class="icon-search"><img src="images/icon-search.png"/></a>
+                        <form method="GET" action="" accept-charset="UTF-8" autocomplete="on" id="wrap" class="">
+                            <a href="javascript:void(0);" class="click-form"></a>
+                            <input id="search" name="search" type="text" placeholder="Tìm kiếm">
+                            <input id="search_submit" value="Rechercher" type="submit">
+                        </form>
+
+                        <a href="javascript:void(0);" class="icon-search d-block d-md-none">
+                            <img src="images/icon-search.png">
+                        </a>
                     </div>
                     <div class="box-cart flex_center position-relative">
-                        <a href="#" class="icon-cart"><img src="images/icon-cart.png"/></a>
+                        <a href="#" class="icon-cart">
+                            <img src="images/icon-cart.png" alt="" class="img-fluid">
+                        </a>
                         <span class="num_cart position-absolute font-weight-bold flex_center">10</span>
                     </div>
-                    <div class="box-login-res flex_center">
+                    <!-- <div class="box-login-res flex_center">
                         <div class="d-flex align-items-center icon-user"><img src="images/icon-user.png"/></div>
                         <div class="d-flex flex-column">
                             <div class="_login">
@@ -76,25 +133,29 @@
                             </div>
                             <span class="name-des">Tài khoản</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </header>
     <main>
         <section class="banner-slide d-md-block d-sm-none d-none banner-list">
-            <!--<a href="#"><img src="../images/list/banner-list.jpg" class="w-100"/></a>-->
+                <a href="#"><img src="../images/detail/banner-detail.png" class="w-100"/></a>
                 <div class="main-nav d-flex flex-column flex_center">
-                    <h4 class="d-flex">Rau sạch</h4>
-                    <div class="d-flex"><a href="#">Trang chủ</a>/<a href="#">Rau sạch</a></div>
+                    <div class="d-flex"><a href="#">Trang chủ</a>>
+                        <a href="#">Hoa quả </a>> 
+                        <a href="#"> <h1 class="nav-title"> Goldkiwifood </h1></a></div>
                 </div>
         </section>
         <!--banner-mobile-->
         <section class="banner-slide d-block d-sm-block d-md-none">
-            <a href="#"><img src="images/list/banner-list-mb.jpg" class="w-100"/></a>
+            <a href="#"><img src="../images/detail/banner-detail.png" class="w-100"/></a>
             <div class="main-nav d-flex flex-column flex_center">
-                <h4 class="d-flex">Rau sạch</h4>
-                <div class="d-flex"><a href="#">Trang chủ</a>/<a href="#">Rau sạch</a></div>
+                <div class="d-flex">
+                    <a href="#">Trang chủ</a>>
+                    <a href="#">Hoa quả </a>> 
+                    <a href="#"> <h1 class="nav-title"> Goldkiwifood </h1></a>
+                </div>
             </div>
         </section>
         <div class="w-100 veg-main veg-list">
@@ -161,240 +222,9 @@
                             <i>Mô tả: </i><br>
                             <p>Hoa cải xanh là loại rau rất giàu chất dinh dưỡng, với hàm lượng vitamin cao và có thể phối hợp đa dạng các món ăn từ xào cho tới nấu canh đều rất hấp dẫn.</p>
                         </div>
-                        <div class="d-flex flex-wrap box-hastag">
-                            <i>Hashtag:</i>
-                            <a href="#">Rau cải xanh</a>
-                            <a href="#">Cải làn</a>
-                            <a href="#">Rau cải xanh</a>
-                        </div>
                     </div>
                 </div>
 
-                <!--- có thể bạn quan tâm -->
-                <div class="row flex_center top-m-block">
-                    <img src="images/bg-leaf.png"/>
-                    <div class="w-100 flex_center d-md-block d-none d-sm-none text-center">Có thể bạn quan tâm?</div>
-                    <div class="w-100 flex_center d-md-none d-block text-center">Sản phẩm khác</div>
-                </div>
-                <!---website-->
-                <div class="row veg-box-4 w-100 d-md-block d-none d-sm-none">
-                    <section class="regular slider-tab ">
-                        <div>
-                            <div class="item-veg-4">
-                                <div class="m_item-veg-4">
-                                    <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
-                                    <div class="m4_detail">
-                                        <h6 class="rs">Xà lách mới về</h6>
-                                        <strike>100.000đ</strike>
-                                        <div>90.000đ <span>300gram</span></div>
-                                    </div>
-                                    <!---icon-view-->
-                                    <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                        <a href="javascript:void(0);" class="icon-view"><img src="images/icon-view.png"/></a>
-                                        <a href="javascript:void(0);" class="icon-cart"><img src="images/icon-cart-2.png"/></a>
-                                    </div>
-                                    <!---icon-view-->
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item-veg-4">
-                                <div class="m_item-veg-4">
-                                    <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
-                                    <div class="m4_detail">
-                                        <h6 class="rs">Xà lách mới về</h6>
-                                        <strike>100.000đ</strike>
-                                        <div>90.000đ <span>300gram</span></div>
-                                    </div>
-                                    <!---icon-view-->
-                                    <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                        <a href="javascript:void(0);" class="icon-view"><img src="images/icon-view.png"/></a>
-                                        <a href="javascript:void(0);" class="icon-cart"><img src="images/icon-cart-2.png"/></a>
-                                    </div>
-                                    <!---icon-view-->
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item-veg-4">
-                                <div class="m_item-veg-4">
-                                    <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
-                                    <div class="m4_detail">
-                                        <h6 class="rs">Xà lách mới về</h6>
-                                        <strike>100.000đ</strike>
-                                        <div>90.000đ <span>300gram</span></div>
-                                    </div>
-                                    <!---icon-view-->
-                                    <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                        <a href="javascript:void(0);" class="icon-view"><img src="images/icon-view.png"/></a>
-                                        <a href="javascript:void(0);" class="icon-cart"><img src="images/icon-cart-2.png"/></a>
-                                    </div>
-                                    <!---icon-view-->
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item-veg-4">
-                                <div class="m_item-veg-4">
-                                    <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
-                                    <div class="m4_detail">
-                                        <h6 class="rs">Xà lách mới về</h6>
-                                        <strike>100.000đ</strike>
-                                        <div>90.000đ <span>300gram</span></div>
-                                    </div>
-                                    <!---icon-view-->
-                                    <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                        <a href="javascript:void(0);" class="icon-view"><img src="images/icon-view.png"/></a>
-                                        <a href="javascript:void(0);" class="icon-cart"><img src="images/icon-cart-2.png"/></a>
-                                    </div>
-                                    <!---icon-view-->
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item-veg-4">
-                                <div class="m_item-veg-4">
-                                    <a href="#"><img src="images/img-veg-8.jpg" class="w-100"/></a>
-                                    <div class="m4_detail">
-                                        <h6 class="rs">Xà lách mới về</h6>
-                                        <strike>100.000đ</strike>
-                                        <div>90.000đ <span>300gram</span></div>
-                                    </div>
-                                    <!---icon-view-->
-                                    <div class="position-absolute w-100 h-100 d-md-block d-none d-sm-none flex_center flex-row hover-item">
-                                        <a href="javascript:void(0);" class="icon-view"><img src="images/icon-view.png"/></a>
-                                        <a href="javascript:void(0);" class="icon-cart"><img src="images/icon-cart-2.png"/></a>
-                                    </div>
-                                    <!---icon-view-->
-                                </div>
-                            </div>
-                        </div>
-
-                    </section>
-                    <div class="w-100 text-center d-flex">
-                        <a href="#" class="btn-viewall">Xem tất cả</a>
-                    </div>
-                </div>
-                <!---website-->
-                <!--mobile-->
-                <div class=" d-block d-md-none">
-                    <div class="w-100 veg-box-4 d-flex flex-wrap">
-                        <div class="col-md-4 item-veg-4">
-                            <div class="m_item-veg-4">
-                                <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
-                                <div class="m4_detail col-md-12 col-7">
-                                    <h6 class="rs">Xà lách mới về</h6>
-                                    <strike>100.000đ</strike>
-                                    <div>90.000đ <span>300gram</span></div>
-                                    <a href="##" class="btn-mua">Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 item-veg-4">
-                            <div class="m_item-veg-4">
-                                <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
-                                <div class="m4_detail col-md-12 col-7">
-                                    <h6 class="rs">Xà lách mới về</h6>
-                                    <strike>100.000đ</strike>
-                                    <div>90.000đ <span>300gram</span></div>
-                                    <a href="##" class="btn-mua">Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 item-veg-4">
-                            <div class="m_item-veg-4">
-                                <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
-                                <div class="m4_detail col-md-12 col-7">
-                                    <h6 class="rs">Xà lách mới về</h6>
-                                    <strike>100.000đ</strike>
-                                    <div>90.000đ <span>300gram</span></div>
-                                    <a href="##" class="btn-mua">Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 item-veg-4">
-                            <div class="m_item-veg-4">
-                                <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
-                                <div class="m4_detail col-md-12 col-7">
-                                    <h6 class="rs">Xà lách mới về</h6>
-                                    <strike>100.000đ</strike>
-                                    <div>90.000đ <span>300gram</span></div>
-                                    <a href="##" class="btn-mua">Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 item-veg-4">
-                            <div class="m_item-veg-4">
-                                <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
-                                <div class="m4_detail col-md-12 col-7">
-                                    <h6 class="rs">Xà lách mới về</h6>
-                                    <strike>100.000đ</strike>
-                                    <div>90.000đ <span>300gram</span></div>
-                                    <a href="##" class="btn-mua">Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 item-veg-4">
-                            <div class="m_item-veg-4">
-                                <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
-                                <div class="m4_detail col-md-12 col-7">
-                                    <h6 class="rs">Xà lách mới về</h6>
-                                    <strike>100.000đ</strike>
-                                    <div>90.000đ <span>300gram</span></div>
-                                    <a href="##" class="btn-mua">Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 item-veg-4">
-                            <div class="m_item-veg-4">
-                                <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
-                                <div class="m4_detail col-md-12 col-7">
-                                    <h6 class="rs">Xà lách mới về</h6>
-                                    <strike>100.000đ</strike>
-                                    <div>90.000đ <span>300gram</span></div>
-                                    <a href="##" class="btn-mua">Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 item-veg-4">
-                            <div class="m_item-veg-4">
-                                <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
-                                <div class="m4_detail col-md-12 col-7">
-                                    <h6 class="rs">Xà lách mới về</h6>
-                                    <strike>100.000đ</strike>
-                                    <div>90.000đ <span>300gram</span></div>
-                                    <a href="##" class="btn-mua">Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 item-veg-4">
-                            <div class="m_item-veg-4">
-                                <a href="#" class="col-md-12 col-5"><img src="images/img-veg-4.jpg" class="w-100"/></a>
-                                <div class="m4_detail col-md-12 col-7">
-                                    <h6 class="rs">Xà lách mới về</h6>
-                                    <strike>100.000đ</strike>
-                                    <div>90.000đ <span>300gram</span></div>
-                                    <a href="##" class="btn-mua">Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--mobile-->
-                <!--- có thể bạn quan tâm -->
-
-
-                <!--sản phẩm đã xem web-->
-                <div class="w-100 d-none d-md-block box-review">
-                    <h4>Sản phẩm đã xem</h4>
-                    <div class="d-flex lst-item">
-                        <a href="#"><img src="images/detail/img-111.jpg"/></a>
-                        <a href="#"><img src="images/detail/img-111.jpg"/></a>
-                        <a href="#"><img src="images/detail/img-111.jpg"/></a>
-                    </div>
-                </div>
-                <!--sản phẩm đã xem web-->
 
             </div>
         </div>

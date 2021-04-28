@@ -383,23 +383,31 @@ body .veg-main .item-veg-4 {
 }
 
 body .veg-main .item-veg-4 .btn-mua {
-    padding: 0 25px 0 55px;
-    line-height: 40px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
-    background: url(../images/icon-cart-mb.png) top 10px left 20px #72bf44 no-repeat;
-    display: none;
-    border-radius: 20px;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    font-weight: 700;
-    margin-top: 10px
+    background: #81c385;
+    padding: 7px 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 14px;
 }
-
-body .veg-main  .item-veg-4 .m_item-veg-4 img {
+body .veg-main .item-veg-4 .btn-mua i {
+    margin-right: 8px;
+}
+body .veg-main .item-veg-4 .btn-mua i ,
+body .veg-main .item-veg-4 .btn-mua span {
+    color : #ffffff ;
+}
+body .veg-main .item-veg-4 .m_item-veg-4 img {
     float: left;
     height: 100%;
     width: 100%;
     max-height: unset !important;
+    object-fit: cover;
+    object-position: center;
 }
 
 body .veg-main  .item-veg-4 .m_item-veg-4 .m4_detail {
@@ -773,6 +781,25 @@ footer {
     width: 100%;
 }
 
+@media (min-width:767px) {
+    body .veg-main .item-veg-4 .btn-mua {
+        opacity:0;
+        visibility : hidden;
+        pointer-events : none; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        white-space: nowrap;
+        margin-top: 0;
+    }
+    body .veg-main .item-veg-4 .m_item-veg-4:hover .btn-mua {
+        opacity: 1 ; 
+        visibility: visible ;
+        pointer-events: auto ;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1000px) {
     body .menu-header .lst-menu a {
         padding: 0 7px;
@@ -792,6 +819,9 @@ footer {
     body .veg-main .veg-box-4{
         margin: 15px 0 30px;
         /*padding: 0 15px;*/
+    }
+    body .veg-main .main-lst .veg-box-4{
+        margin: 0 -15px; 
     }
     body .veg-main .tab-pane .veg-box-4{
         padding: 0 10px;
@@ -828,9 +858,6 @@ footer {
 
     body .veg-main .veg-box-4 .item-veg-4 .btn-mua {
         display: inline-flex;
-        font-size: 14px;
-        padding: 0 15px 0 40px;
-        background: url(../images/icon-cart-mb.png) top 10px left 15px #72bf44 no-repeat
     }
 
     body .veg-main .veg-box-4 .item-veg-4 {
@@ -1975,19 +2002,7 @@ div#popup-cart.slide-in {
         margin-right: 25px;
     }
     #wrap {
-        width: 250px;
-        height: 38px;
-    }
-    #wrap input[type=text] {
-        height: 38px;
-        padding-left: 35px;
-    }
-    #wrap .click-form {
-        
-        top: 4px;
-        width: 25px;
-        height: 25px;
-        background-size: cover;
+        width: 155px;
     }
     body .menu-header .right-menu .box-cart i, body .menu-header .right-menu .box-search i {
         font-size: 26px;

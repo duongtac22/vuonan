@@ -93,6 +93,11 @@ $(document).ready(function() {
         });
     }
 
+    $('.toggle-filter').click(function(){
+        $('.main-lst .lst-left').stop().slideToggle();
+        $(this).toggleClass('active');
+    });
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
             $('#back-to-top').fadeIn();
