@@ -302,6 +302,17 @@
     background-color: unset;
     border-color: unset ;
     color : #111111 ; 
+    opacity: 1;
+    font-weight: 600;
+}
+.lst-pagin ul li.page-item .page-link {
+    opacity: 0.5;
+}
+.lst-pagin ul li.page-item .page-link:hover {
+    opacity: 1;
+    color : #111111 ;
+    background-color: transparent;
+    border: none;
 }
 .lst-pagin ul li a {
     border-radius: 5px;
@@ -377,9 +388,9 @@
         border: thin solid #cfd8dc;
         -webkit-box-shadow: 0 5px 5px 0 rgb(0 0 0 / 30%);
         box-shadow: 0 5px 5px 0 rgb(0 0 0 / 30%);
-        max-height: calc(100vh - 60px);
+        max-height: 300px;
         overflow-y: scroll;
-        padding-bottom: 60px;
+        -webkit-overflow-scrolling: touch;
     }
     
     .product-sidebar {

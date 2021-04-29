@@ -110,9 +110,9 @@
     margin-right: 20px;
 }
 
-.cart-page .list-cart-popup-item a.del-cart i {
-    font-size: 18px;
-    color: #a9a6a6;
+.cart-page .list-cart-popup-item a.del-cart img {
+    width: 16px;
+    height: 16px;
 }
 .cart-page .cart-total-info {
     padding: 21px 25px;
